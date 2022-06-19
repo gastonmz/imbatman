@@ -448,7 +448,6 @@
 		BD13C016629328061E59092486D21C37 /* SVGKParserDefsAndUse.h in Headers */ = {isa = PBXBuildFile; fileRef = C90044CC792129BC7024B8101D71A123 /* SVGKParserDefsAndUse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BD275ABF1DF797F0313866144001AE2D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD822E87614B2879F803F6B045C8B3F /* StringExtensions.swift */; };
 		BD763AE9FAF9359EDDE2E0F6C5A78CC3 /* RKObjectMapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A9F048DD158E6E8DD85A74D298C6129 /* RKObjectMapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE35257D7A02451B659CB9132B03C458 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B46EFF6B8C4F67B25C39EF0B9C09B949 /* MobileCoreServices.framework */; };
 		BECE55736F8FE0964E095D93B134E4E0 /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1EB8CCB52D85A103D4B56EA7AB9D54 /* ImageCompositionLayer.swift */; };
 		BF61BD1B780F84EB855CDC8D07C70CF6 /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C17A6C787BBB225F214C125E679E6E /* AnimationPublic.swift */; };
 		BFCED8394637170E2CA2F59B303D931B /* RKHTTPRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ADA11350B44E7036E9DC1A4EBAB591F /* RKHTTPRequestOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -586,6 +585,7 @@
 		F55CEF2B1F7D47FC0FE8445DFE875022 /* SVGGradientElement.h in Headers */ = {isa = PBXBuildFile; fileRef = C88100AD04E3C214E280D9D8CDAF87F5 /* SVGGradientElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F659E0EBE31959B1758B3628AB4720B4 /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F785A9D43DCC4DD2F8004D8678D2FC18 /* AnimatorNodeDebugging.swift */; };
 		F6605CB4BA21163C9D3D7C6E4E62BF7B /* DDFileLogger+Buffering.m in Sources */ = {isa = PBXBuildFile; fileRef = EA407C98E94F4285F588F4F1128B3039 /* DDFileLogger+Buffering.m */; };
+		F660897D285EB9230033EE2D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F660897C285EB9230033EE2D /* CoreServices.framework */; };
 		F763BE0AE71432BDF9A016E98D8475F9 /* SVGKDefine.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C1ECF4739BAFBDC20B32E7689C2E58 /* SVGKDefine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F78E0AB1CE1F79FBD7C87C7E6CCC4D94 /* RKRelationshipConnectionOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 1B574F0D09DFC1673A089AE9DE5A925E /* RKRelationshipConnectionOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F79954C7D48B356B32ACA8BDDFDD183E /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E23A32BE7866EB69C9D852AD61BF1 /* LayerTransformNode.swift */; };
@@ -1413,6 +1413,7 @@
 		F4D1C2EC506F9FA6B8D2363D7E7F9C40 /* Pods-Im BatmanTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Im BatmanTests"; path = Pods_Im_BatmanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D2135311F8BA971B4E1FC17814AD64 /* ISO8601DateFormatterValueTransformer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ISO8601DateFormatterValueTransformer-dummy.m"; sourceTree = "<group>"; };
 		F5A9EDA4F91CBF194E08FBC86299CB73 /* CSSValue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CSSValue.m; path = "Source/DOM classes/Core DOM/CSSValue.m"; sourceTree = "<group>"; };
+		F660897C285EB9230033EE2D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.0.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		F70393332C757DDD8D987BE7BF6C352F /* CSSValueList.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CSSValueList.h; path = "Source/DOM classes/Core DOM/CSSValueList.h"; sourceTree = "<group>"; };
 		F70A311132CC51A3BD29607FF31FD2F2 /* SVGGElement.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SVGGElement.m; path = "Source/DOM classes/SVG-DOM/SVGGElement.m"; sourceTree = "<group>"; };
 		F71F9E3ED3C8EDF44C037A5FD32602C4 /* DOMGlobalSettings.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DOMGlobalSettings.h; path = "Source/DOM classes/Core DOM/DOMGlobalSettings.h"; sourceTree = "<group>"; };
@@ -1518,8 +1519,8 @@
 				C7BB14FC1C81FADC7C5AFD710CDD7BAA /* CFNetwork.framework in Frameworks */,
 				74491017C9A51ED821AC7F3377CF901F /* CoreData.framework in Frameworks */,
 				EA01D22EC659069139D0A9454AE6B1B2 /* Foundation.framework in Frameworks */,
-				BE35257D7A02451B659CB9132B03C458 /* MobileCoreServices.framework in Frameworks */,
 				F11AF9FF16018B323A43F6E57314F189 /* Security.framework in Frameworks */,
+				F660897D285EB9230033EE2D /* CoreServices.framework in Frameworks */,
 				C9E275D347D63EF6E0A59CF4A4A24FFA /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1664,6 +1665,7 @@
 		2FE445AD883B9ABD3E0241A05A5B79FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F660897C285EB9230033EE2D /* CoreServices.framework */,
 				7585FA694AD77E4F2A0A1318198D580F /* iOS */,
 			);
 			name = Frameworks;
@@ -3858,8 +3860,9 @@
 				PRODUCT_NAME = RestKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3925,8 +3928,9 @@
 				PRODUCT_NAME = RestKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

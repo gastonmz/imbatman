@@ -20,6 +20,13 @@
 		F651E635285E45E600492244 /* Im_BatmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E634285E45E600492244 /* Im_BatmanTests.m */; };
 		F651E63F285E45E600492244 /* Im_BatmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E63E285E45E600492244 /* Im_BatmanUITests.m */; };
 		F651E641285E45E600492244 /* Im_BatmanUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */; };
+		F6608973285EAF530033EE2D /* charactersData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608972285EAF530033EE2D /* charactersData.m */; };
+		F6608976285EAFD40033EE2D /* charactersResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608975285EAFD40033EE2D /* charactersResults.m */; };
+		F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608978285EB87C0033EE2D /* charactersResultsThumbnail.m */; };
+		F660897B285EB8E10033EE2D /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F660897A285EB8E10033EE2D /* CoreServices.framework */; };
+		F6608980285EB9C70033EE2D /* charactersResultsUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = F660897F285EB9C70033EE2D /* charactersResultsUrls.m */; };
+		F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608982285EBCBB0033EE2D /* charactersResultsProps.m */; };
+		F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */; };
 		F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; };
 		F69EEB92285E5B6D009A89C4 /* Pods_Im_Batman.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
@@ -28,7 +35,6 @@
 		F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */; };
 		F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA6285E5DFA009A89C4 /* CoreData.framework */; };
 		F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA8285E5E00009A89C4 /* Security.framework */; };
-		F69EEBAB285E5E0B009A89C4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBAA285E5E0B009A89C4 /* MobileCoreServices.framework */; };
 		F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */; };
 		F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */ = {isa = PBXBuildFile; fileRef = F69EEBBD285EAAF5009A89C4 /* characters.m */; };
 /* End PBXBuildFile section */
@@ -92,6 +98,19 @@
 		F651E63A285E45E600492244 /* Im BatmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Im BatmanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F651E63E285E45E600492244 /* Im_BatmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanUITests.m; sourceTree = "<group>"; };
 		F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanUITestsLaunchTests.m; sourceTree = "<group>"; };
+		F6608971285EAF530033EE2D /* charactersData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersData.h; sourceTree = "<group>"; };
+		F6608972285EAF530033EE2D /* charactersData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersData.m; sourceTree = "<group>"; };
+		F6608974285EAFD40033EE2D /* charactersResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResults.h; sourceTree = "<group>"; };
+		F6608975285EAFD40033EE2D /* charactersResults.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResults.m; sourceTree = "<group>"; };
+		F6608977285EB87C0033EE2D /* charactersResultsThumbnail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResultsThumbnail.h; sourceTree = "<group>"; };
+		F6608978285EB87C0033EE2D /* charactersResultsThumbnail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsThumbnail.m; sourceTree = "<group>"; };
+		F660897A285EB8E10033EE2D /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = System/Library/Frameworks/CoreServices.framework; sourceTree = SDKROOT; };
+		F660897E285EB9C70033EE2D /* charactersResultsUrls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResultsUrls.h; sourceTree = "<group>"; };
+		F660897F285EB9C70033EE2D /* charactersResultsUrls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsUrls.m; sourceTree = "<group>"; };
+		F6608981285EBCBB0033EE2D /* charactersResultsProps.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResultsProps.h; sourceTree = "<group>"; };
+		F6608982285EBCBB0033EE2D /* charactersResultsProps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsProps.m; sourceTree = "<group>"; };
+		F6608984285EBD110033EE2D /* charactersResultsPropsItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResultsPropsItems.h; sourceTree = "<group>"; };
+		F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsPropsItems.m; sourceTree = "<group>"; };
 		F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB82285E5B6D009A89C4 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,10 +140,10 @@
 				199AEBA88121887D35378F67 /* Pods_Im_Batman.framework in Frameworks */,
 				F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */,
 				F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */,
+				F660897B285EB8E10033EE2D /* CoreServices.framework in Frameworks */,
 				F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */,
 				F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */,
 				F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */,
-				F69EEBAB285E5E0B009A89C4 /* MobileCoreServices.framework in Frameworks */,
 				F69EEBA3285E5DC9009A89C4 /* StoreKit.framework in Frameworks */,
 				F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */,
 			);
@@ -165,6 +184,7 @@
 		DA24E5BF133D84C93E7B4047 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F660897A285EB8E10033EE2D /* CoreServices.framework */,
 				F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */,
 				F69EEBAA285E5E0B009A89C4 /* MobileCoreServices.framework */,
 				F69EEBA8285E5E00009A89C4 /* Security.framework */,
@@ -252,6 +272,18 @@
 			children = (
 				F69EEBBC285EAAF5009A89C4 /* characters.h */,
 				F69EEBBD285EAAF5009A89C4 /* characters.m */,
+				F6608971285EAF530033EE2D /* charactersData.h */,
+				F6608972285EAF530033EE2D /* charactersData.m */,
+				F6608974285EAFD40033EE2D /* charactersResults.h */,
+				F6608975285EAFD40033EE2D /* charactersResults.m */,
+				F6608977285EB87C0033EE2D /* charactersResultsThumbnail.h */,
+				F6608978285EB87C0033EE2D /* charactersResultsThumbnail.m */,
+				F660897E285EB9C70033EE2D /* charactersResultsUrls.h */,
+				F660897F285EB9C70033EE2D /* charactersResultsUrls.m */,
+				F6608981285EBCBB0033EE2D /* charactersResultsProps.h */,
+				F6608982285EBCBB0033EE2D /* charactersResultsProps.m */,
+				F6608984285EBD110033EE2D /* charactersResultsPropsItems.h */,
+				F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */,
 			);
 			path = Objetos;
 			sourceTree = "<group>";
@@ -497,9 +529,15 @@
 			files = (
 				F651E620285E45E500492244 /* ViewController.m in Sources */,
 				F651E61A285E45E500492244 /* AppDelegate.m in Sources */,
+				F6608976285EAFD40033EE2D /* charactersResults.m in Sources */,
 				F651E62B285E45E500492244 /* main.m in Sources */,
+				F6608980285EB9C70033EE2D /* charactersResultsUrls.m in Sources */,
+				F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */,
+				F6608973285EAF530033EE2D /* charactersData.m in Sources */,
+				F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */,
 				F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */,
 				F651E61D285E45E500492244 /* SceneDelegate.m in Sources */,
+				F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
