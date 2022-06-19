@@ -1,0 +1,934 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		199AEBA88121887D35378F67 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */; };
+		1E096098DFD6B469DB4CA2D4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
+		D354866692000A26A60FD18D /* Pods_Im_BatmanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */; };
+		F651E61A285E45E500492244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E619285E45E500492244 /* AppDelegate.m */; };
+		F651E61D285E45E500492244 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61C285E45E500492244 /* SceneDelegate.m */; };
+		F651E620285E45E500492244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61F285E45E500492244 /* ViewController.m */; };
+		F651E623285E45E500492244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F651E621285E45E500492244 /* Main.storyboard */; };
+		F651E625285E45E500492244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F651E624285E45E500492244 /* Assets.xcassets */; };
+		F651E628285E45E500492244 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F651E626285E45E500492244 /* LaunchScreen.storyboard */; };
+		F651E62B285E45E500492244 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E62A285E45E500492244 /* main.m */; };
+		F651E635285E45E600492244 /* Im_BatmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E634285E45E600492244 /* Im_BatmanTests.m */; };
+		F651E63F285E45E600492244 /* Im_BatmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E63E285E45E600492244 /* Im_BatmanUITests.m */; };
+		F651E641285E45E600492244 /* Im_BatmanUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */; };
+		F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; };
+		F69EEB92285E5B6D009A89C4 /* Pods_Im_Batman.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
+		F69EEB94285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F69EEBA3285E5DC9009A89C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA2285E5DC9009A89C4 /* StoreKit.framework */; };
+		F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */; };
+		F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA6285E5DFA009A89C4 /* CoreData.framework */; };
+		F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA8285E5E00009A89C4 /* Security.framework */; };
+		F69EEBAB285E5E0B009A89C4 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBAA285E5E0B009A89C4 /* MobileCoreServices.framework */; };
+		F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */; };
+		F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */ = {isa = PBXBuildFile; fileRef = F69EEBBD285EAAF5009A89C4 /* characters.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F651E631285E45E600492244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F651E60D285E45E500492244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F651E614285E45E500492244;
+			remoteInfo = "Im Batman";
+		};
+		F651E63B285E45E600492244 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F651E60D285E45E500492244 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F651E614285E45E500492244;
+			remoteInfo = "Im Batman";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F69EEBA1285E5B6D009A89C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F69EEB92285E5B6D009A89C4 /* Pods_Im_Batman.framework in Embed Frameworks */,
+				F69EEB94285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_Batman_Im_BatmanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FDC1E76266475215B38E67B /* Pods-Im Batman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman.release.xcconfig"; path = "Target Support Files/Pods-Im Batman/Pods-Im Batman.release.xcconfig"; sourceTree = "<group>"; };
+		20DDE93FF5A6D247D071B306 /* Pods-Im BatmanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im BatmanTests.debug.xcconfig"; path = "Target Support Files/Pods-Im BatmanTests/Pods-Im BatmanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_BatmanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		602F01ED7A45E5B60FBE57A9 /* Pods-Im Batman-Im BatmanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman-Im BatmanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_Batman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CCD0D7D0C5FFC92725B1793 /* Pods-Im BatmanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im BatmanTests.release.xcconfig"; path = "Target Support Files/Pods-Im BatmanTests/Pods-Im BatmanTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2D8006DAFB52B2F7A0DC747 /* Pods-Im Batman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman.debug.xcconfig"; path = "Target Support Files/Pods-Im Batman/Pods-Im Batman.debug.xcconfig"; sourceTree = "<group>"; };
+		E60E65C79012EF0C36489918 /* Pods-Im Batman-Im BatmanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman-Im BatmanUITests.release.xcconfig"; path = "Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F651E615285E45E500492244 /* Im Batman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Im Batman.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F651E618285E45E500492244 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F651E619285E45E500492244 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F651E61B285E45E500492244 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		F651E61C285E45E500492244 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		F651E61E285E45E500492244 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F651E61F285E45E500492244 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F651E622285E45E500492244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F651E624285E45E500492244 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F651E627285E45E500492244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F651E629285E45E500492244 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F651E62A285E45E500492244 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F651E630285E45E600492244 /* Im BatmanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Im BatmanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F651E634285E45E600492244 /* Im_BatmanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanTests.m; sourceTree = "<group>"; };
+		F651E63A285E45E600492244 /* Im BatmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Im BatmanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F651E63E285E45E600492244 /* Im_BatmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanUITests.m; sourceTree = "<group>"; };
+		F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanUITestsLaunchTests.m; sourceTree = "<group>"; };
+		F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB82285E5B6D009A89C4 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_Batman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_Batman_Im_BatmanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB85285E5B6D009A89C4 /* Pods_Im_BatmanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_BatmanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB86285E5B6D009A89C4 /* RestKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RestKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB87285E5B6D009A89C4 /* RKValueTransformers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RKValueTransformers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB88285E5B6D009A89C4 /* SOCKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SOCKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB89285E5B6D009A89C4 /* SVGKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVGKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEB8A285E5B6D009A89C4 /* TransitionKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TransitionKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F69EEBA2285E5DC9009A89C4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		F69EEBA6285E5DFA009A89C4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F69EEBA8285E5E00009A89C4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F69EEBAA285E5E0B009A89C4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F69EEBBC285EAAF5009A89C4 /* characters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = characters.h; sourceTree = "<group>"; };
+		F69EEBBD285EAAF5009A89C4 /* characters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = characters.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F651E612285E45E500492244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199AEBA88121887D35378F67 /* Pods_Im_Batman.framework in Frameworks */,
+				F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */,
+				F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */,
+				F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */,
+				F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */,
+				F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */,
+				F69EEBAB285E5E0B009A89C4 /* MobileCoreServices.framework in Frameworks */,
+				F69EEBA3285E5DC9009A89C4 /* StoreKit.framework in Frameworks */,
+				F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F651E62D285E45E600492244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D354866692000A26A60FD18D /* Pods_Im_BatmanTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F651E637285E45E600492244 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E096098DFD6B469DB4CA2D4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B80B3E55BDE134730874E526 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2D8006DAFB52B2F7A0DC747 /* Pods-Im Batman.debug.xcconfig */,
+				0FDC1E76266475215B38E67B /* Pods-Im Batman.release.xcconfig */,
+				602F01ED7A45E5B60FBE57A9 /* Pods-Im Batman-Im BatmanUITests.debug.xcconfig */,
+				E60E65C79012EF0C36489918 /* Pods-Im Batman-Im BatmanUITests.release.xcconfig */,
+				20DDE93FF5A6D247D071B306 /* Pods-Im BatmanTests.debug.xcconfig */,
+				9CCD0D7D0C5FFC92725B1793 /* Pods-Im BatmanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA24E5BF133D84C93E7B4047 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */,
+				F69EEBAA285E5E0B009A89C4 /* MobileCoreServices.framework */,
+				F69EEBA8285E5E00009A89C4 /* Security.framework */,
+				F69EEBA6285E5DFA009A89C4 /* CoreData.framework */,
+				F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */,
+				F69EEBA2285E5DC9009A89C4 /* StoreKit.framework */,
+				F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */,
+				F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */,
+				F69EEB82285E5B6D009A89C4 /* Lottie.framework */,
+				F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */,
+				F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */,
+				F69EEB85285E5B6D009A89C4 /* Pods_Im_BatmanTests.framework */,
+				F69EEB86285E5B6D009A89C4 /* RestKit.framework */,
+				F69EEB87285E5B6D009A89C4 /* RKValueTransformers.framework */,
+				F69EEB88285E5B6D009A89C4 /* SOCKit.framework */,
+				F69EEB89285E5B6D009A89C4 /* SVGKit.framework */,
+				F69EEB8A285E5B6D009A89C4 /* TransitionKit.framework */,
+				874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */,
+				0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */,
+				4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F651E60C285E45E500492244 = {
+			isa = PBXGroup;
+			children = (
+				F651E617285E45E500492244 /* Im Batman */,
+				F651E633285E45E600492244 /* Im BatmanTests */,
+				F651E63D285E45E600492244 /* Im BatmanUITests */,
+				F651E616285E45E500492244 /* Products */,
+				B80B3E55BDE134730874E526 /* Pods */,
+				DA24E5BF133D84C93E7B4047 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F651E616285E45E500492244 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F651E615285E45E500492244 /* Im Batman.app */,
+				F651E630285E45E600492244 /* Im BatmanTests.xctest */,
+				F651E63A285E45E600492244 /* Im BatmanUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F651E617285E45E500492244 /* Im Batman */ = {
+			isa = PBXGroup;
+			children = (
+				F69EEBBB285EAAD6009A89C4 /* Objetos */,
+				F651E618285E45E500492244 /* AppDelegate.h */,
+				F651E619285E45E500492244 /* AppDelegate.m */,
+				F651E61B285E45E500492244 /* SceneDelegate.h */,
+				F651E61C285E45E500492244 /* SceneDelegate.m */,
+				F651E61E285E45E500492244 /* ViewController.h */,
+				F651E61F285E45E500492244 /* ViewController.m */,
+				F651E621285E45E500492244 /* Main.storyboard */,
+				F651E624285E45E500492244 /* Assets.xcassets */,
+				F651E626285E45E500492244 /* LaunchScreen.storyboard */,
+				F651E629285E45E500492244 /* Info.plist */,
+				F651E62A285E45E500492244 /* main.m */,
+			);
+			path = "Im Batman";
+			sourceTree = "<group>";
+		};
+		F651E633285E45E600492244 /* Im BatmanTests */ = {
+			isa = PBXGroup;
+			children = (
+				F651E634285E45E600492244 /* Im_BatmanTests.m */,
+			);
+			path = "Im BatmanTests";
+			sourceTree = "<group>";
+		};
+		F651E63D285E45E600492244 /* Im BatmanUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F651E63E285E45E600492244 /* Im_BatmanUITests.m */,
+				F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */,
+			);
+			path = "Im BatmanUITests";
+			sourceTree = "<group>";
+		};
+		F69EEBBB285EAAD6009A89C4 /* Objetos */ = {
+			isa = PBXGroup;
+			children = (
+				F69EEBBC285EAAF5009A89C4 /* characters.h */,
+				F69EEBBD285EAAF5009A89C4 /* characters.m */,
+			);
+			path = Objetos;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F651E614285E45E500492244 /* Im Batman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F651E644285E45E600492244 /* Build configuration list for PBXNativeTarget "Im Batman" */;
+			buildPhases = (
+				37AB11A7B019EA15CCABF937 /* [CP] Check Pods Manifest.lock */,
+				F651E611285E45E500492244 /* Sources */,
+				F651E612285E45E500492244 /* Frameworks */,
+				F651E613285E45E500492244 /* Resources */,
+				C47C632677CCE419B988DB18 /* [CP] Embed Pods Frameworks */,
+				F69EEBA1285E5B6D009A89C4 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Im Batman";
+			productName = "Im Batman";
+			productReference = F651E615285E45E500492244 /* Im Batman.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F651E62F285E45E600492244 /* Im BatmanTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F651E647285E45E600492244 /* Build configuration list for PBXNativeTarget "Im BatmanTests" */;
+			buildPhases = (
+				2F39D6BA35B61C0FF6BEF8F9 /* [CP] Check Pods Manifest.lock */,
+				F651E62C285E45E600492244 /* Sources */,
+				F651E62D285E45E600492244 /* Frameworks */,
+				F651E62E285E45E600492244 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F651E632285E45E600492244 /* PBXTargetDependency */,
+			);
+			name = "Im BatmanTests";
+			productName = "Im BatmanTests";
+			productReference = F651E630285E45E600492244 /* Im BatmanTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F651E639285E45E600492244 /* Im BatmanUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F651E64A285E45E600492244 /* Build configuration list for PBXNativeTarget "Im BatmanUITests" */;
+			buildPhases = (
+				1EEF24B32AC693C5964B1021 /* [CP] Check Pods Manifest.lock */,
+				F651E636285E45E600492244 /* Sources */,
+				F651E637285E45E600492244 /* Frameworks */,
+				F651E638285E45E600492244 /* Resources */,
+				70DE68B19B37B1C2FF031C91 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F651E63C285E45E600492244 /* PBXTargetDependency */,
+			);
+			name = "Im BatmanUITests";
+			productName = "Im BatmanUITests";
+			productReference = F651E63A285E45E600492244 /* Im BatmanUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F651E60D285E45E500492244 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					F651E614285E45E500492244 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					F651E62F285E45E600492244 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = F651E614285E45E500492244;
+					};
+					F651E639285E45E600492244 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = F651E614285E45E500492244;
+					};
+				};
+			};
+			buildConfigurationList = F651E610285E45E500492244 /* Build configuration list for PBXProject "Im Batman" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F651E60C285E45E500492244;
+			productRefGroup = F651E616285E45E500492244 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F651E614285E45E500492244 /* Im Batman */,
+				F651E62F285E45E600492244 /* Im BatmanTests */,
+				F651E639285E45E600492244 /* Im BatmanUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F651E613285E45E500492244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F651E628285E45E500492244 /* LaunchScreen.storyboard in Resources */,
+				F651E625285E45E500492244 /* Assets.xcassets in Resources */,
+				F651E623285E45E500492244 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F651E62E285E45E600492244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F651E638285E45E600492244 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1EEF24B32AC693C5964B1021 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Im Batman-Im BatmanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F39D6BA35B61C0FF6BEF8F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Im BatmanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37AB11A7B019EA15CCABF937 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Im Batman-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70DE68B19B37B1C2FF031C91 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C47C632677CCE419B988DB18 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Im Batman/Pods-Im Batman-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Im Batman/Pods-Im Batman-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Im Batman/Pods-Im Batman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F651E611285E45E500492244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F651E620285E45E500492244 /* ViewController.m in Sources */,
+				F651E61A285E45E500492244 /* AppDelegate.m in Sources */,
+				F651E62B285E45E500492244 /* main.m in Sources */,
+				F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */,
+				F651E61D285E45E500492244 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F651E62C285E45E600492244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F651E635285E45E600492244 /* Im_BatmanTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F651E636285E45E600492244 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F651E63F285E45E600492244 /* Im_BatmanUITests.m in Sources */,
+				F651E641285E45E600492244 /* Im_BatmanUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F651E632285E45E600492244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F651E614285E45E500492244 /* Im Batman */;
+			targetProxy = F651E631285E45E600492244 /* PBXContainerItemProxy */;
+		};
+		F651E63C285E45E600492244 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F651E614285E45E500492244 /* Im Batman */;
+			targetProxy = F651E63B285E45E600492244 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F651E621285E45E500492244 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F651E622285E45E500492244 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F651E626285E45E500492244 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F651E627285E45E500492244 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F651E642285E45E600492244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F651E643285E45E600492244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F651E645285E45E600492244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2D8006DAFB52B2F7A0DC747 /* Pods-Im Batman.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Im Batman/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"ISO8601DateFormatterValueTransformer\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"RKValueTransformers\"",
+					"-framework",
+					"\"RestKit\"",
+					"-framework",
+					"\"SOCKit\"",
+					"-framework",
+					"\"SVGKit\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TransitionKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+					"-ObjC\n-ObjC\n",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-Batman";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F651E646285E45E600492244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDC1E76266475215B38E67B /* Pods-Im Batman.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Im Batman/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"xml2\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaLumberjack\"",
+					"-framework",
+					"\"CoreData\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"ISO8601DateFormatterValueTransformer\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"RKValueTransformers\"",
+					"-framework",
+					"\"RestKit\"",
+					"-framework",
+					"\"SOCKit\"",
+					"-framework",
+					"\"SVGKit\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TransitionKit\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+					"-ObjC\n-ObjC\n",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-Batman";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F651E648285E45E600492244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DDE93FF5A6D247D071B306 /* Pods-Im BatmanTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-BatmanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Im Batman.app/Im Batman";
+			};
+			name = Debug;
+		};
+		F651E649285E45E600492244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CCD0D7D0C5FFC92725B1793 /* Pods-Im BatmanTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-BatmanTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Im Batman.app/Im Batman";
+			};
+			name = Release;
+		};
+		F651E64B285E45E600492244 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 602F01ED7A45E5B60FBE57A9 /* Pods-Im Batman-Im BatmanUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-BatmanUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Im Batman";
+			};
+			name = Debug;
+		};
+		F651E64C285E45E600492244 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E60E65C79012EF0C36489918 /* Pods-Im Batman-Im BatmanUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-BatmanUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Im Batman";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F651E610285E45E500492244 /* Build configuration list for PBXProject "Im Batman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F651E642285E45E600492244 /* Debug */,
+				F651E643285E45E600492244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F651E644285E45E600492244 /* Build configuration list for PBXNativeTarget "Im Batman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F651E645285E45E600492244 /* Debug */,
+				F651E646285E45E600492244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F651E647285E45E600492244 /* Build configuration list for PBXNativeTarget "Im BatmanTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F651E648285E45E600492244 /* Debug */,
+				F651E649285E45E600492244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F651E64A285E45E600492244 /* Build configuration list for PBXNativeTarget "Im BatmanUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F651E64B285E45E600492244 /* Debug */,
+				F651E64C285E45E600492244 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F651E60D285E45E500492244 /* Project object */;
+}

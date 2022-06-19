@@ -1,0 +1,9 @@
+${PODS_ROOT}/Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework
+${BUILT_PRODUCTS_DIR}/RKValueTransformers/RKValueTransformers.framework
+${BUILT_PRODUCTS_DIR}/RestKit/RestKit.framework
+${BUILT_PRODUCTS_DIR}/SOCKit/SOCKit.framework
+${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework
+${BUILT_PRODUCTS_DIR}/TransitionKit/TransitionKit.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
