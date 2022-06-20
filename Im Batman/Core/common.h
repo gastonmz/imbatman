@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define TIME_STAMP [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000]
 
-
 @interface common : NSObject
 + (NSString *) md5:(NSString *) input;
 + (NSString *) createMarvelHash: (NSString*)ts;

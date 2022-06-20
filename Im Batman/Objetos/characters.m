@@ -9,7 +9,7 @@
 
 @implementation characters
 
-+ (NSDictionary*) elementToPropertyMappings {
++ (NSDictionary*) elementosApropiedadMapping {
   return @{
     @"code": @"code",
     @"status": @"status",

@@ -10,6 +10,7 @@
 		199AEBA88121887D35378F67 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */; };
 		1E096098DFD6B469DB4CA2D4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
 		D354866692000A26A60FD18D /* Pods_Im_BatmanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */; };
+		F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */ = {isa = PBXBuildFile; fileRef = F66071892861127300C635D3 /* charactersFabrica.m */; };
 		F651E61A285E45E500492244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E619285E45E500492244 /* AppDelegate.m */; };
 		F651E61D285E45E500492244 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61C285E45E500492244 /* SceneDelegate.m */; };
 		F651E620285E45E500492244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61F285E45E500492244 /* ViewController.m */; };
@@ -20,7 +21,6 @@
 		F651E635285E45E600492244 /* Im_BatmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E634285E45E600492244 /* Im_BatmanTests.m */; };
 		F651E63F285E45E600492244 /* Im_BatmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E63E285E45E600492244 /* Im_BatmanUITests.m */; };
 		F651E641285E45E600492244 /* Im_BatmanUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */; };
-		F660718A2861127300C635D3 /* charactersFabrica.m in Sources */ = {isa = PBXBuildFile; fileRef = F66071892861127300C635D3 /* charactersFabrica.m */; };
 		F6608973285EAF530033EE2D /* charactersData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608972285EAF530033EE2D /* charactersData.m */; };
 		F6608976285EAFD40033EE2D /* charactersResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608975285EAFD40033EE2D /* charactersResults.m */; };
 		F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608978285EB87C0033EE2D /* charactersResultsThumbnail.m */; };
@@ -553,6 +553,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */,
 				F651E620285E45E500492244 /* ViewController.m in Sources */,
 				F651E61A285E45E500492244 /* AppDelegate.m in Sources */,
 				F6608976285EAFD40033EE2D /* charactersResults.m in Sources */,
@@ -563,7 +564,6 @@
 				F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */,
 				F660898A285EBE1E0033EE2D /* common.m in Sources */,
 				F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */,
-				F660718A2861127300C635D3 /* charactersFabrica.m in Sources */,
 				F651E61D285E45E500492244 /* SceneDelegate.m in Sources */,
 				F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */,
 			);
