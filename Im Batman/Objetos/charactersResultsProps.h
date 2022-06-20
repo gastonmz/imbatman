@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface charactersResultsProps : NSObject
 @property (nonatomic, copy) NSNumber *available;
 @property (nonatomic, copy) NSString *collectionUri;
-@property (nonatomic, copy) charactersResultsPropsItems *items;
+@property (nonatomic, strong, readwrite) charactersResultsPropsItems *items;
 @property (nonatomic, copy) NSNumber *returned;
 @end
 

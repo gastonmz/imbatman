@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSNumber *limit;
 @property (nonatomic, copy) NSNumber *total;
 @property (nonatomic, copy) NSNumber *count;
-@property (nonatomic, copy) charactersResults *results;
+@property (nonatomic, strong, readwrite) charactersResults *results;
 @end
 
 NS_ASSUME_NONNULL_END

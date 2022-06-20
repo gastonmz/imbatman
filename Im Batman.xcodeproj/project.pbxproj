@@ -27,6 +27,7 @@
 		F6608980285EB9C70033EE2D /* charactersResultsUrls.m in Sources */ = {isa = PBXBuildFile; fileRef = F660897F285EB9C70033EE2D /* charactersResultsUrls.m */; };
 		F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608982285EBCBB0033EE2D /* charactersResultsProps.m */; };
 		F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */; };
+		F660898A285EBE1E0033EE2D /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608989285EBE1E0033EE2D /* common.m */; };
 		F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; };
 		F69EEB92285E5B6D009A89C4 /* Pods_Im_Batman.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
@@ -111,6 +112,8 @@
 		F6608982285EBCBB0033EE2D /* charactersResultsProps.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsProps.m; sourceTree = "<group>"; };
 		F6608984285EBD110033EE2D /* charactersResultsPropsItems.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResultsPropsItems.h; sourceTree = "<group>"; };
 		F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsPropsItems.m; sourceTree = "<group>"; };
+		F6608988285EBE1E0033EE2D /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		F6608989285EBE1E0033EE2D /* common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
 		F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB82285E5B6D009A89C4 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -234,6 +237,7 @@
 		F651E617285E45E500492244 /* Im Batman */ = {
 			isa = PBXGroup;
 			children = (
+				F6608987285EBE090033EE2D /* Core */,
 				F69EEBBB285EAAD6009A89C4 /* Objetos */,
 				F651E618285E45E500492244 /* AppDelegate.h */,
 				F651E619285E45E500492244 /* AppDelegate.m */,
@@ -265,6 +269,15 @@
 				F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */,
 			);
 			path = "Im BatmanUITests";
+			sourceTree = "<group>";
+		};
+		F6608987285EBE090033EE2D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F6608988285EBE1E0033EE2D /* common.h */,
+				F6608989285EBE1E0033EE2D /* common.m */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		F69EEBBB285EAAD6009A89C4 /* Objetos */ = {
@@ -535,6 +548,7 @@
 				F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */,
 				F6608973285EAF530033EE2D /* charactersData.m in Sources */,
 				F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */,
+				F660898A285EBE1E0033EE2D /* common.m in Sources */,
 				F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */,
 				F651E61D285E45E500492244 /* SceneDelegate.m in Sources */,
 				F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */,

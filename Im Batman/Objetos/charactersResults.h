@@ -17,13 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *description;
 @property (nonatomic, copy) NSString *offmodifiedset;
-@property (nonatomic, copy) charactersResultsThumbnail *thumbnail;
+@property (nonatomic, strong, readwrite) charactersResultsThumbnail *thumbnail;
 @property (nonatomic, copy) NSString *resourceUri;
-@property (nonatomic, copy) charactersResultsProps *comics;
-@property (nonatomic, copy) charactersResultsProps *series;
-@property (nonatomic, copy) charactersResultsProps *stories;
-@property (nonatomic, copy) charactersResultsProps *events;
-@property (nonatomic, copy) charactersResultsUrls *urls;
+@property (nonatomic, strong, readwrite) charactersResultsProps *comics;
+@property (nonatomic, strong, readwrite) charactersResultsProps *series;
+@property (nonatomic, strong, readwrite) charactersResultsProps *stories;
+@property (nonatomic, strong, readwrite) charactersResultsProps *events;
+@property (nonatomic, strong, readwrite) charactersResultsUrls *urls;
 
 @end
 

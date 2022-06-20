@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *copyright;
 @property (nonatomic, copy) NSString *attributionText;
 @property (nonatomic, copy) NSString *etag;
-@property (nonatomic, copy) charactersData *data;
+@property (nonatomic, strong, readwrite) charactersData *data;
 @end
 
 NS_ASSUME_NONNULL_END
