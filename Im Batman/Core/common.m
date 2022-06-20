@@ -12,12 +12,13 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 + (NSString *) md5:(NSString *) input {
+    // Stackoverflow milagros...
     const char *cStr = [input UTF8String];
     unsigned char digest[CC_MD5_DIGEST_LENGTH];
     CC_MD5(cStr, (uint32_t)strlen(cStr), digest);
     NSMutableString *output = [NSMutableString stringWithCapacity:CC_MD5_DIGEST_LENGTH * 2];
     for(int i = 0; i < CC_MD5_DIGEST_LENGTH; i++)
-        [output appendFormat:@"%02x", digest[i]]; //%02X for capital letters
+        [output appendFormat:@"%02x", digest[i]];
     return output;
 }
 #pragma clang diagnostic pop

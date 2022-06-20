@@ -17,4 +17,9 @@
   };
 }
 
++ (NSDictionary*) elementosReducidosApropiedadMapping;{
+    return @{
+      @"available": @"available"
+    };
+}
 @end

@@ -26,8 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface charactersFabrica : NSObject
 
 + (instancetype) compartidoCharacters;
-+ (RKObjectMapping *) respuestaMapping;
-
++ (RKObjectMapping *) mapeaListaCompletaDeCaracteres;
++ (RKObjectMapping *) mapeaListaReducidaDeCaracteres;
 @end
 
 NS_ASSUME_NONNULL_END

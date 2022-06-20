@@ -13,11 +13,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface charactersResultsProps : NSObject
 @property (nonatomic, copy) NSNumber *available;
 @property (nonatomic, copy) NSString *collectionURI;
-//@property (nonatomic, strong, readwrite) charactersResultsPropsItems *items;
 @property (nonatomic, strong, readwrite) NSMutableArray <charactersResultsPropsItems *> *items;
 @property (nonatomic, copy) NSNumber *returned;
 
 + (NSDictionary*) elementosApropiedadMapping;
++ (NSDictionary*) elementosReducidosApropiedadMapping;
 
 @end
 

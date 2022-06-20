@@ -21,4 +21,13 @@
   };
 }
 
++ (NSDictionary*) elementosReducidosApropiedadMapping {
+  return @{
+    @"id": @"id",
+    @"name": @"name",
+    @"description": @"description",
+    @"modified": @"modified",
+  };
+}
+
 @end

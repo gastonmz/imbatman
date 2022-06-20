@@ -27,6 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 + (NSDictionary*) elementosApropiedadMapping;
++ (NSDictionary*) elementosReducidosApropiedadMapping;
 
 @end
 
