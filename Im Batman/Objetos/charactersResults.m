@@ -11,4 +11,14 @@
 
 @synthesize description;
 
++ (NSDictionary*) elementosApropiedadMapping {
+  return @{
+    @"id": @"id",
+    @"name": @"name",
+    @"description": @"description",
+    @"modified": @"modified",
+    @"resourceURI": @"resourceUri"
+  };
+}
+
 @end

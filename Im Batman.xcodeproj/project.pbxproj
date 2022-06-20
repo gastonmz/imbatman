@@ -20,6 +20,7 @@
 		F651E635285E45E600492244 /* Im_BatmanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E634285E45E600492244 /* Im_BatmanTests.m */; };
 		F651E63F285E45E600492244 /* Im_BatmanUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E63E285E45E600492244 /* Im_BatmanUITests.m */; };
 		F651E641285E45E600492244 /* Im_BatmanUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */; };
+		F660718A2861127300C635D3 /* charactersFabrica.m in Sources */ = {isa = PBXBuildFile; fileRef = F66071892861127300C635D3 /* charactersFabrica.m */; };
 		F6608973285EAF530033EE2D /* charactersData.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608972285EAF530033EE2D /* charactersData.m */; };
 		F6608976285EAFD40033EE2D /* charactersResults.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608975285EAFD40033EE2D /* charactersResults.m */; };
 		F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608978285EB87C0033EE2D /* charactersResultsThumbnail.m */; };
@@ -99,6 +100,8 @@
 		F651E63A285E45E600492244 /* Im BatmanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Im BatmanUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F651E63E285E45E600492244 /* Im_BatmanUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanUITests.m; sourceTree = "<group>"; };
 		F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Im_BatmanUITestsLaunchTests.m; sourceTree = "<group>"; };
+		F66071882861127300C635D3 /* charactersFabrica.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersFabrica.h; sourceTree = "<group>"; };
+		F66071892861127300C635D3 /* charactersFabrica.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersFabrica.m; sourceTree = "<group>"; };
 		F6608971285EAF530033EE2D /* charactersData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersData.h; sourceTree = "<group>"; };
 		F6608972285EAF530033EE2D /* charactersData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersData.m; sourceTree = "<group>"; };
 		F6608974285EAFD40033EE2D /* charactersResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersResults.h; sourceTree = "<group>"; };
@@ -239,6 +242,7 @@
 			children = (
 				F6608987285EBE090033EE2D /* Core */,
 				F69EEBBB285EAAD6009A89C4 /* Objetos */,
+				F66071872860E17300C635D3 /* Characters */,
 				F651E618285E45E500492244 /* AppDelegate.h */,
 				F651E619285E45E500492244 /* AppDelegate.m */,
 				F651E61B285E45E500492244 /* SceneDelegate.h */,
@@ -269,6 +273,15 @@
 				F651E640285E45E600492244 /* Im_BatmanUITestsLaunchTests.m */,
 			);
 			path = "Im BatmanUITests";
+			sourceTree = "<group>";
+		};
+		F66071872860E17300C635D3 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				F66071882861127300C635D3 /* charactersFabrica.h */,
+				F66071892861127300C635D3 /* charactersFabrica.m */,
+			);
+			path = Characters;
 			sourceTree = "<group>";
 		};
 		F6608987285EBE090033EE2D /* Core */ = {
@@ -550,6 +563,7 @@
 				F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */,
 				F660898A285EBE1E0033EE2D /* common.m in Sources */,
 				F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */,
+				F660718A2861127300C635D3 /* charactersFabrica.m in Sources */,
 				F651E61D285E45E500492244 /* SceneDelegate.m in Sources */,
 				F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */,
 			);

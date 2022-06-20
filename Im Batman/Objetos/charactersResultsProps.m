@@ -9,4 +9,12 @@
 
 @implementation charactersResultsProps
 
++ (NSDictionary*) elementosApropiedadMapping {
+  return @{
+    @"available": @"available",
+    @"collectionURI": @"collectionURI",
+    @"returned": @"returned"
+  };
+}
+
 @end

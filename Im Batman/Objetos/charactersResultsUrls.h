@@ -15,7 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface charactersResultsUrls : NSObject
 @property (nonatomic, copy) NSString *type;
-@property (nonatomic, copy) NSString *details;
+@property (nonatomic, copy) NSString *url;
+
++ (NSDictionary*) elementosApropiedadMapping;
+
 @end
 
 NS_ASSUME_NONNULL_END

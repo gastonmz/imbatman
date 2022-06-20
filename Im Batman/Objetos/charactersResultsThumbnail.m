@@ -9,4 +9,11 @@
 
 @implementation charactersResultsThumbnail
 
++ (NSDictionary*) elementosApropiedadMapping {
+  return @{
+    @"path": @"path",
+    @"extension": @"extension"
+  };
+}
+
 @end

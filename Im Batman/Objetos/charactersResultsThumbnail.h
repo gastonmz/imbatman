@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface charactersResultsThumbnail : NSObject
 @property (nonatomic, copy) NSString *path;
 @property (nonatomic, copy) NSString *extension;
+
++ (NSDictionary*) elementosApropiedadMapping;
+
 @end
 
 NS_ASSUME_NONNULL_END

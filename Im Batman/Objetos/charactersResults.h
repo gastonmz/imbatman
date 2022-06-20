@@ -16,14 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSNumber *id;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *description;
-@property (nonatomic, copy) NSString *offmodifiedset;
+@property (nonatomic, copy) NSString *modified;
 @property (nonatomic, strong, readwrite) charactersResultsThumbnail *thumbnail;
 @property (nonatomic, copy) NSString *resourceUri;
-@property (nonatomic, strong, readwrite) charactersResultsProps *comics;
-@property (nonatomic, strong, readwrite) charactersResultsProps *series;
-@property (nonatomic, strong, readwrite) charactersResultsProps *stories;
-@property (nonatomic, strong, readwrite) charactersResultsProps *events;
-@property (nonatomic, strong, readwrite) charactersResultsUrls *urls;
+@property (nonatomic, strong, readwrite) NSMutableArray <charactersResultsProps *> *comics;
+@property (nonatomic, strong, readwrite) NSMutableArray <charactersResultsProps *> *series;
+@property (nonatomic, strong, readwrite) NSMutableArray <charactersResultsProps *> *stories;
+@property (nonatomic, strong, readwrite) NSMutableArray <charactersResultsProps *> *events;
+@property (nonatomic, strong, readwrite) NSMutableArray <charactersResultsUrls *> *urls;
+
+
++ (NSDictionary*) elementosApropiedadMapping;
 
 @end
 

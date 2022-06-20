@@ -9,4 +9,15 @@
 
 @implementation characters
 
++ (NSDictionary*) elementToPropertyMappings {
+  return @{
+    @"code": @"code",
+    @"status": @"status",
+    @"copyright": @"copyright",
+    @"attributionText": @"attributionText",
+    @"etag": @"etag"
+  };
+}
+
 @end
+

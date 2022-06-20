@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface charactersResultsPropsItems : NSObject
 @property (nonatomic, copy) NSString *resourceURI;
 @property (nonatomic, copy) NSString *name;
+
++ (NSDictionary*) elementosApropiedadMapping;
+
 @end
 
 NS_ASSUME_NONNULL_END

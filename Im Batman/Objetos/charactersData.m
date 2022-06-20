@@ -9,4 +9,13 @@
 
 @implementation charactersData
 
++ (NSDictionary*) elementosApropiedadMapping {
+  return @{
+    @"offset": @"offset",
+    @"limit": @"limit",
+    @"total": @"total",
+    @"count": @"count"
+  };
+}
+
 @end

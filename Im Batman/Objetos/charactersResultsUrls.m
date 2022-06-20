@@ -9,4 +9,11 @@
 
 @implementation charactersResultsUrls
 
++ (NSDictionary*) elementosApropiedadMapping {
+  return @{
+    @"type": @"type",
+    @"url": @"url"
+  };
+}
+
 @end

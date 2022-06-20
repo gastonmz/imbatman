@@ -9,4 +9,11 @@
 
 @implementation charactersResultsPropsItems
 
++ (NSDictionary*) elementosApropiedadMapping {
+  return @{
+    @"resourceURI": @"resourceURI",
+    @"name": @"name"
+  };
+}
+
 @end
