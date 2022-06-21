@@ -24,6 +24,7 @@ static charactersFabrica *compartidoCharacters = nil;
 
     return self;
 }
+
 + (RKObjectMapping *) mapeaListaCompletaDeCaracteres {
 
     // Mapea respuesta de caracteres obtenidos
@@ -156,7 +157,7 @@ static charactersFabrica *compartidoCharacters = nil;
 - (void) inicializaObjectManager {
     
     // Nivel de logueo
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelError);
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
 
     // Crea el ObjectManager
     RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:MARVEL_BASE_URL]];
