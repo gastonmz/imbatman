@@ -18,6 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define TIME_STAMP [NSString stringWithFormat:@"%f",[[NSDate date] timeIntervalSince1970] * 1000]
 
+#define RK_ROUTE_CARACTER @"caracter"
+#define RK_ROUTE_LISTA @"lista"
+
 @interface common : NSObject
 + (NSString *) md5:(NSString *) input;
 + (NSString *) createMarvelHash: (NSString*)ts;

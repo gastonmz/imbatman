@@ -12,6 +12,7 @@
 		D354866692000A26A60FD18D /* Pods_Im_BatmanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */; };
 		F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */ = {isa = PBXBuildFile; fileRef = F66071892861127300C635D3 /* charactersFabrica.m */; };
 		F610FA7D2861376C00FCF8B6 /* charactersConductor.m in Sources */ = {isa = PBXBuildFile; fileRef = F610FA7C2861376C00FCF8B6 /* charactersConductor.m */; };
+		F61663352862B11500B5B2C8 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = F61663342862B11500B5B2C8 /* ViewController2.m */; };
 		F651E61A285E45E500492244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E619285E45E500492244 /* AppDelegate.m */; };
 		F651E61D285E45E500492244 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61C285E45E500492244 /* SceneDelegate.m */; };
 		F651E620285E45E500492244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61F285E45E500492244 /* ViewController.m */; };
@@ -86,6 +87,8 @@
 		E60E65C79012EF0C36489918 /* Pods-Im Batman-Im BatmanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman-Im BatmanUITests.release.xcconfig"; path = "Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F610FA7B2861376C00FCF8B6 /* charactersConductor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersConductor.h; sourceTree = "<group>"; };
 		F610FA7C2861376C00FCF8B6 /* charactersConductor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersConductor.m; sourceTree = "<group>"; };
+		F61663332862B11500B5B2C8 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		F61663342862B11500B5B2C8 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
 		F651E615285E45E500492244 /* Im Batman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Im Batman.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F651E618285E45E500492244 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F651E619285E45E500492244 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -252,6 +255,8 @@
 				F651E61C285E45E500492244 /* SceneDelegate.m */,
 				F651E61E285E45E500492244 /* ViewController.h */,
 				F651E61F285E45E500492244 /* ViewController.m */,
+				F61663332862B11500B5B2C8 /* ViewController2.h */,
+				F61663342862B11500B5B2C8 /* ViewController2.m */,
 				F651E621285E45E500492244 /* Main.storyboard */,
 				F651E624285E45E500492244 /* Assets.xcassets */,
 				F651E626285E45E500492244 /* LaunchScreen.storyboard */,
@@ -560,6 +565,7 @@
 			files = (
 				F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */,
 				F651E620285E45E500492244 /* ViewController.m in Sources */,
+				F61663352862B11500B5B2C8 /* ViewController2.m in Sources */,
 				F651E61A285E45E500492244 /* AppDelegate.m in Sources */,
 				F6608976285EAFD40033EE2D /* charactersResults.m in Sources */,
 				F651E62B285E45E500492244 /* main.m in Sources */,

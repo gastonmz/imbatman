@@ -10,13 +10,14 @@
 
 @implementation charactersFabrica
 
+RKObjectManager *manager;
 static charactersFabrica *compartidoCharacters = nil;
 
 - (id) init{
     self = [super init];
     if (self) {
-        [self inicializaObjectManager];
 
+        if (!manager) [self initManager];
         if (nil == compartidoCharacters) {
             [charactersFabrica setcompartidoCharacters:self];
         }
@@ -99,6 +100,7 @@ static charactersFabrica *compartidoCharacters = nil;
 
 + (RKObjectMapping *) mapeaListaReducidaDeCaracteres {
 
+ 
     // Mapea respuesta de caracteres obtenidos
     RKObjectMapping* characterMapping = [RKObjectMapping mappingForClass:[characters class]];
     [characterMapping addAttributeMappingsFromDictionary:[characters elementosApropiedadMapping]];
@@ -153,33 +155,40 @@ static charactersFabrica *compartidoCharacters = nil;
     return characterMapping;
 }
 
-
-- (void) inicializaObjectManager {
+- (void) initManager {
     
     // Nivel de logueo
-    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelTrace);
-
+    RKLogConfigureByName("RestKit/ObjectMapping", RKLogLevelOff);
+    
     // Crea el ObjectManager
-    RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:MARVEL_BASE_URL]];
+    manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:MARVEL_BASE_URL]];
     manager.requestSerializationMIMEType = RKMIMETypeJSON;
-        
-    // Configura Descriptor
-    [manager addResponseDescriptor:
-                   [RKResponseDescriptor
-                       responseDescriptorWithMapping:[charactersFabrica mapeaListaReducidaDeCaracteres]
+    // Configura Cache
+    [manager managedObjectStore].managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:[manager managedObjectStore].persistentStoreManagedObjectContext];
+    
+    // Configura Router y Descriptor para Caracter
+    [[manager router].routeSet addRoute:[RKRoute routeWithName:RK_ROUTE_CARACTER pathPattern:[NSString stringWithFormat:@"%@/:characterId",MARVEL_API_CHARACTERS] method:RKRequestMethodGET]];
+    [manager addResponseDescriptor:[RKResponseDescriptor
+                                    responseDescriptorWithMapping:[charactersFabrica mapeaListaCompletaDeCaracteres]
+                                                                                      method:RKRequestMethodGET
+                                                                                 pathPattern:[NSString stringWithFormat:@"%@/:characterId",MARVEL_API_CHARACTERS]
+                                                                                     keyPath:@""
+                                                                                 statusCodes:
+                                                                                     RKStatusCodeIndexSetForClass(
+                                                                                         RKStatusCodeClassSuccessful)]];
+
+    // Configura Router y Descriptor para el Listado
+    [[RKObjectManager sharedManager].router.routeSet addRoute:[RKRoute routeWithName:RK_ROUTE_LISTA pathPattern:MARVEL_API_CHARACTERS method:RKRequestMethodGET]];
+    [manager addResponseDescriptor:[RKResponseDescriptor
+                    responseDescriptorWithMapping:[charactersFabrica mapeaListaReducidaDeCaracteres]
                                               method:RKRequestMethodGET
                                          pathPattern:MARVEL_API_CHARACTERS
                                              keyPath:@""
                                          statusCodes:
                                              RKStatusCodeIndexSetForClass(
                                                  RKStatusCodeClassSuccessful)]];
+
     
-    // Conigura router
-    [[manager router].routeSet
-                    addRoutes:@[
-                           [RKRoute routeWithClass:[characters class]
-                                       pathPattern:MARVEL_API_CHARACTERS
-                                            method:RKRequestMethodGET]]];
 }
 
 #pragma mark - Characters Fabrica

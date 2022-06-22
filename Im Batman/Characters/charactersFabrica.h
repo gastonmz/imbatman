@@ -28,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype) compartidoCharacters;
 + (RKObjectMapping *) mapeaListaCompletaDeCaracteres;
 + (RKObjectMapping *) mapeaListaReducidaDeCaracteres;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -15,7 +15,7 @@
 @interface charactersConductor : NSObject
 
 + (instancetype) compartidoConductor;
-+ (void) listaReducida:(int)limite paginas:(int)paginas empiezaCon:(NSString*)empiezaCon bloque:(void (^) (BOOL exito, characters *resultado, NSError *error))completado;
-
++ (void) obtieneLista:(int)limite paginas:(int)paginas empiezaCon:(NSString*)empiezaCon bloque:(void (^) (BOOL exito, characters *resultado, NSError *error))completado;
++ (void) obtieneCaracter:(int)caracterID bloque:(void (^) (BOOL exito, characters *resultado, NSError *error))completado;
 @end
 

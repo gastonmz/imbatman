@@ -12,11 +12,10 @@
 
 static charactersConductor *compartidoConductor = nil;
 
-- (id) init{
+- (id) init {
     self = [super init];
     if (self) {
-        [self inicializaFabrica];
-
+        (void)[[charactersFabrica alloc] init];
         if (nil == compartidoConductor) {
             [charactersConductor setcharactersConductor:self];
         }
@@ -25,11 +24,7 @@ static charactersConductor *compartidoConductor = nil;
 }
 
 
-- (void) inicializaFabrica {
-    (void)[[charactersFabrica alloc] init];
-}
-
-+ (void) listaReducida:(int)limite
++ (void) obtieneLista:(int)limite
                paginas:(int)paginas
             empiezaCon:(NSString*)empiezaCon
                 bloque:(void (^) (BOOL exito, characters *resultado, NSError *error))completado {
@@ -47,23 +42,53 @@ static charactersConductor *compartidoConductor = nil;
     (empiezaCon) ? [parametros setValue:empiezaCon forKey:@"nameStartsWith"] : nil;
     int paginacion = (paginas) ? (limite * (paginas - 1)) : 0;
     (paginacion > 0) ? [parametros setValue:[NSNumber numberWithInt:paginacion] forKey:@"offset"] : nil;
-
+    
     characters * modelo = [[characters alloc] init];
-    [[RKObjectManager sharedManager] getObject:modelo
-                                          path:nil
-                                    parameters:parametros
-                                       success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-                                            NSLog(@"yes");
-                                            characters *objetos = [mappingResult firstObject];
-                                            completado(YES, objetos,  nil);
-                                       }
-                                       failure:^(RKObjectRequestOperation *operation, NSError *error) {
-                                            NSLog(@"no");
-                                            // La mala onda misma...
-                                            completado(NO, nil, error);
-                                       }];
+    [[RKObjectManager sharedManager] getObjectsAtPathForRouteNamed:RK_ROUTE_LISTA
+                                                            object:modelo
+                                                        parameters:parametros
+                                                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                                NSLog(@"yes");
+                                                                characters *objetos = [mappingResult firstObject];
+                                                                completado(YES, objetos,  nil);
+                                                           }
+                                                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                                NSLog(@"no");
+                                                                // La mala onda misma...
+                                                                completado(NO, nil, error);
+                                                           }];
+   
 }
 
++ (void) obtieneCaracter:(int)caracterID
+                bloque:(void (^) (BOOL exito, characters *resultado, NSError *error))completado {
+   
+      // Genera parametros
+    NSString* ts = TIME_STAMP;
+    NSMutableDictionary* parametros = [[NSMutableDictionary alloc] init];
+    // fijos
+    [parametros setValue:MARVEL_PUBLIC_KEY forKey:@"apikey"];
+    [parametros setValue:ts forKey:@"ts"];
+    [parametros setValue:[common createMarvelHash:ts] forKey:@"hash"];
+    [parametros setValue:[NSNumber numberWithInt:caracterID] forKey:@"characterId"];
+
+    characters * modelo = [[characters alloc] init];
+    modelo.characterId = [NSNumber numberWithInt:caracterID];
+    [[RKObjectManager sharedManager] getObjectsAtPathForRouteNamed:RK_ROUTE_CARACTER
+                                                            object:modelo
+                                                        parameters:parametros
+                                                           success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+                                                                NSLog(@"yes");
+                                                                characters *objetos = [mappingResult firstObject];
+                                                                completado(YES, objetos,  nil);
+                                                           }
+                                                           failure:^(RKObjectRequestOperation *operation, NSError *error) {
+                                                                NSLog(@"no");
+                                                                // La mala onda misma...
+                                                                completado(NO, nil, error);
+                                                           }];
+
+}
 #pragma mark - Characters Conductor
 
 + (void)setcharactersConductor:(charactersConductor *)conduc {
