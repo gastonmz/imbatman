@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 #define RK_ROUTE_CARACTER @"caracter"
 #define RK_ROUTE_LISTA @"lista"
 
+#define PANTALLA_LARGO ([[UIScreen mainScreen] bounds].size.width)
+#define PANTALLA_ALTO ([[UIScreen mainScreen] bounds].size.height)
+
 @interface common : NSObject
 + (NSString *) md5:(NSString *) input;
 + (NSString *) createMarvelHash: (NSString*)ts;

@@ -12,33 +12,152 @@
 #import "Characters/charactersConductor.h"
 
 
+
 @interface ViewController ()
 
 @end
 
+
 @implementation ViewController
+
+@synthesize nubesBase;
+@synthesize fondoInicio;
+@synthesize explosion;
+@synthesize bang;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
+    [self BoludeamosUnPocoConLaIntro];
+    
+    UILabel* esperame = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 30)];
+    [esperame setText:@""];
+    [self.view addSubview:esperame];
   
-   (void)[[charactersConductor alloc] init];
-    [charactersConductor listaReducida:5 paginas:2 empiezaCon:@"r" bloque:^(BOOL exito, characters* resultados, NSError* problemas) {
+    
+    UIButton* aa = [[UIButton alloc] initWithFrame:CGRectMake(10, 150, 200, 50)];
+    [aa setTitle:@"todos" forState:UIControlStateNormal];
+    [aa addTarget:self
+               action:@selector(chupito:)
+     forControlEvents:UIControlEventTouchUpInside];
+    [aa setBackgroundColor:[UIColor redColor]];
+    [aa setExclusiveTouch:YES];
+
+
+
+    UIButton* cc = [[UIButton alloc] initWithFrame:CGRectMake(10, 230, 200, 50)];
+    [cc setTitle:@"mas" forState:UIControlStateNormal];
+    [cc setBackgroundColor:[UIColor blueColor]];
+    [cc setExclusiveTouch:YES];
+
+    [cc addTarget:self
+               action:@selector(chupete:)
+     forControlEvents:UIControlEventTouchUpInside];
+
+    
+
+//    [self.view addSubview:aa];
+//    [self.view addSubview:cc];
+
+    
+}
+
+-(void) chupito:(UIButton*)sender{
+    
+    (void)[[charactersConductor alloc] init];
+    [charactersConductor obtieneLista:5 paginas:2 empiezaCon:@"r" bloque:^(BOOL exito, characters* resultados, NSError* problemas) {
+        // averga...
+        for (int x = 0; x < resultados.data.results.count; x++) {
+            NSLog(@"%i - %@",x, resultados.data.results[x].name);
+        }
+
+    }];
+    
+    
+}
+
+- (void) BoludeamosUnPocoConLaIntro {
+    
+    // no veo nada
+    [nubesBase setAlpha:0.0f];
+    [explosion setAlpha:0.0f];
+    [bang setAlpha:0.0f];
+    // guardo lo que necesito
+    float nubesPosicionY = nubesBase.frame.origin.y;
+    [nubesBase setFrame:CGRectMake(nubesBase.frame.origin.x, PANTALLA_ALTO + nubesBase.frame.size.height, nubesBase.frame.size.width, nubesBase.frame.size.height)];
+    explosion.frame = [self centrarImagen:bang paAbajo:YES];
+    bang.frame = [self centrarImagen:bang paAbajo:NO];
+    
+    // Ultima boludez primero...
+    void (^bangeamela)(void) = ^{
+        [UIView animateWithDuration:0.1f
+                              delay:0.3f
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                                    [self.explosion setAlpha:0.0f];
+                                    [self.bang setAlpha:1.0f];
+                         }
+                         completion:nil];
+      };
+    
+    // Segunda boludez, segundo...
+    void (^subimela)(void) = ^{
+        [UIView animateWithDuration:0.4f
+                              delay:0.0f
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                            self.explosion.frame = [self centrarImagen:self.explosion paAbajo:NO];
+                            [self.explosion setAlpha:1.0f];
+                         }
+                         completion:^(BOOL finished) {
+                            bangeamela();
+                        }];
+      };
+      
+      // Acá arrancamos
+      [UIView animateWithDuration:0.8f
+                            delay:0.0f
+                          options:UIViewAnimationOptionCurveEaseIn
+                       animations:^{
+                              [self.nubesBase setFrame:CGRectMake(self->nubesBase.frame.origin.x, nubesPosicionY, self->nubesBase.frame.size.width, self->nubesBase.frame.size.height)];
+                              [self.nubesBase setAlpha:1.0f];
+                       }
+                       completion:^(BOOL finished) {
+                           subimela();
+                       }];
+}
+
+- (CGRect) centrarImagen: (UIImageView*)im paAbajo:(BOOL)paAbajo{
+    return CGRectMake((self.view.frame.size.width / 2) - (im.frame.size.width / 2),(paAbajo) ? PANTALLA_ALTO + im.frame.size.height : (self.view.frame.size.height / 2) - (im.frame.size.height / 2), im.frame.size.width, im.frame.size.height);
+}
+
+
+-(void) chupete:(UIButton*)sender{
+    
+    (void)[[charactersConductor alloc] init];
+    [charactersConductor obtieneLista:10 paginas:1 empiezaCon:@"j" bloque:^(BOOL exito, characters* resultados, NSError* problemas) {
+        // averga...
+        for (int x = 0; x < resultados.data.results.count; x++) {
+            NSLog(@"%i - %@",x, resultados.data.results[x].name);
+        }
+
+    }];
+    
+    
+}
+
+- (void) chupala:(UIButton*)sender {
+    (void)[[charactersConductor alloc] init];
+    [charactersConductor obtieneCaracter:1009487  bloque:^(BOOL exito, characters* resultados, NSError* problemas) {
         // averga...
         for (int x = 0; x < resultados.data.results.count; x++) {
             NSLog(@"%i - %@",x, resultados.data.results[x].name);
         }
         
     }];
-    
-    
-    
-    
-    
+
 }
-
-
 
 
 @end
