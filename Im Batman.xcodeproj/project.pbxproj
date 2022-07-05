@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		199AEBA88121887D35378F67 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */; };
-		1E096098DFD6B469DB4CA2D4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
-		D354866692000A26A60FD18D /* Pods_Im_BatmanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */; };
+		59A9BB0EE134C483A3CFA388 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96B10A5FEEC41790151459BB /* Pods_Im_Batman.framework */; };
+		860CCC248D0B90A03A74177F /* Pods_Im_BatmanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB85285E5B6D009A89C4 /* Pods_Im_BatmanTests.framework */; };
+		94449C3E9007E72ECF4F769D /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DE3C82B50AB7D9F2C5F5E7 /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
 		F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */ = {isa = PBXBuildFile; fileRef = F66071892861127300C635D3 /* charactersFabrica.m */; };
 		F610FA7D2861376C00FCF8B6 /* charactersConductor.m in Sources */ = {isa = PBXBuildFile; fileRef = F610FA7C2861376C00FCF8B6 /* charactersConductor.m */; };
 		F61663352862B11500B5B2C8 /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = F61663342862B11500B5B2C8 /* ViewController2.m */; };
+		F64E4E1F2873D463007E4D72 /* JasonTodd.m in Sources */ = {isa = PBXBuildFile; fileRef = F64E4E1E2873D463007E4D72 /* JasonTodd.m */; };
 		F651E61A285E45E500492244 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E619285E45E500492244 /* AppDelegate.m */; };
-		F651E61D285E45E500492244 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61C285E45E500492244 /* SceneDelegate.m */; };
 		F651E620285E45E500492244 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F651E61F285E45E500492244 /* ViewController.m */; };
 		F651E623285E45E500492244 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F651E621285E45E500492244 /* Main.storyboard */; };
 		F651E625285E45E500492244 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F651E624285E45E500492244 /* Assets.xcassets */; };
@@ -31,10 +31,6 @@
 		F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608982285EBCBB0033EE2D /* charactersResultsProps.m */; };
 		F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */; };
 		F660898A285EBE1E0033EE2D /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608989285EBE1E0033EE2D /* common.m */; };
-		F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; };
-		F69EEB92285E5B6D009A89C4 /* Pods_Im_Batman.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */; };
-		F69EEB94285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */; };
 		F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA6285E5DFA009A89C4 /* CoreData.framework */; };
 		F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA8285E5E00009A89C4 /* Security.framework */; };
@@ -66,8 +62,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				F69EEB92285E5B6D009A89C4 /* Pods_Im_Batman.framework in Embed Frameworks */,
-				F69EEB94285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,24 +69,23 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_Batman_Im_BatmanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FDC1E76266475215B38E67B /* Pods-Im Batman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman.release.xcconfig"; path = "Target Support Files/Pods-Im Batman/Pods-Im Batman.release.xcconfig"; sourceTree = "<group>"; };
 		20DDE93FF5A6D247D071B306 /* Pods-Im BatmanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im BatmanTests.debug.xcconfig"; path = "Target Support Files/Pods-Im BatmanTests/Pods-Im BatmanTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_BatmanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		602F01ED7A45E5B60FBE57A9 /* Pods-Im Batman-Im BatmanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman-Im BatmanUITests.debug.xcconfig"; path = "Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_Batman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B10A5FEEC41790151459BB /* Pods_Im_Batman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_Batman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CCD0D7D0C5FFC92725B1793 /* Pods-Im BatmanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im BatmanTests.release.xcconfig"; path = "Target Support Files/Pods-Im BatmanTests/Pods-Im BatmanTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2D8006DAFB52B2F7A0DC747 /* Pods-Im Batman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman.debug.xcconfig"; path = "Target Support Files/Pods-Im Batman/Pods-Im Batman.debug.xcconfig"; sourceTree = "<group>"; };
+		B1DE3C82B50AB7D9F2C5F5E7 /* Pods_Im_Batman_Im_BatmanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Im_Batman_Im_BatmanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E60E65C79012EF0C36489918 /* Pods-Im Batman-Im BatmanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Im Batman-Im BatmanUITests.release.xcconfig"; path = "Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F610FA7B2861376C00FCF8B6 /* charactersConductor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = charactersConductor.h; sourceTree = "<group>"; };
 		F610FA7C2861376C00FCF8B6 /* charactersConductor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersConductor.m; sourceTree = "<group>"; };
 		F61663332862B11500B5B2C8 /* ViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
 		F61663342862B11500B5B2C8 /* ViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		F64E4E1D2873D463007E4D72 /* JasonTodd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JasonTodd.h; sourceTree = "<group>"; };
+		F64E4E1E2873D463007E4D72 /* JasonTodd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JasonTodd.m; sourceTree = "<group>"; };
 		F651E615285E45E500492244 /* Im Batman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Im Batman.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F651E618285E45E500492244 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F651E619285E45E500492244 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F651E61B285E45E500492244 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		F651E61C285E45E500492244 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		F651E61E285E45E500492244 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F651E61F285E45E500492244 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F651E622285E45E500492244 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,7 +117,6 @@
 		F6608989285EBE1E0033EE2D /* common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
 		F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F69EEB82285E5B6D009A89C4 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_Batman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_Batman_Im_BatmanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB85285E5B6D009A89C4 /* Pods_Im_BatmanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_BatmanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,14 +139,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				199AEBA88121887D35378F67 /* Pods_Im_Batman.framework in Frameworks */,
 				F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */,
 				F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */,
 				F660897B285EB8E10033EE2D /* CoreServices.framework in Frameworks */,
-				F69EEB93285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */,
-				F69EEB91285E5B6D009A89C4 /* Pods_Im_Batman.framework in Frameworks */,
 				F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */,
 				F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */,
+				59A9BB0EE134C483A3CFA388 /* Pods_Im_Batman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D354866692000A26A60FD18D /* Pods_Im_BatmanTests.framework in Frameworks */,
+				860CCC248D0B90A03A74177F /* Pods_Im_BatmanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,7 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E096098DFD6B469DB4CA2D4 /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */,
+				94449C3E9007E72ECF4F769D /* Pods_Im_Batman_Im_BatmanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,20 +191,34 @@
 				F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */,
 				F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */,
 				F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */,
-				F69EEB82285E5B6D009A89C4 /* Lottie.framework */,
-				F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */,
-				F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */,
 				F69EEB85285E5B6D009A89C4 /* Pods_Im_BatmanTests.framework */,
 				F69EEB86285E5B6D009A89C4 /* RestKit.framework */,
 				F69EEB87285E5B6D009A89C4 /* RKValueTransformers.framework */,
 				F69EEB88285E5B6D009A89C4 /* SOCKit.framework */,
 				F69EEB89285E5B6D009A89C4 /* SVGKit.framework */,
 				F69EEB8A285E5B6D009A89C4 /* TransitionKit.framework */,
-				874D51DBDB9F48FCDB956102 /* Pods_Im_Batman.framework */,
-				0600C4EFD94D4D213BA31D4F /* Pods_Im_Batman_Im_BatmanUITests.framework */,
-				4CE6C28AB2D8B66F3A06EF2E /* Pods_Im_BatmanTests.framework */,
+				96B10A5FEEC41790151459BB /* Pods_Im_Batman.framework */,
+				B1DE3C82B50AB7D9F2C5F5E7 /* Pods_Im_Batman_Im_BatmanUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F63B43A72873E28300D317BA /* Fuentes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fuentes;
+			sourceTree = "<group>";
+		};
+		F64E4E1C2873D44A007E4D72 /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				F651E61E285E45E500492244 /* ViewController.h */,
+				F651E61F285E45E500492244 /* ViewController.m */,
+				F64E4E1D2873D463007E4D72 /* JasonTodd.h */,
+				F64E4E1E2873D463007E4D72 /* JasonTodd.m */,
+			);
+			path = Controladores;
 			sourceTree = "<group>";
 		};
 		F651E60C285E45E500492244 = {
@@ -226,6 +230,7 @@
 				F651E616285E45E500492244 /* Products */,
 				B80B3E55BDE134730874E526 /* Pods */,
 				DA24E5BF133D84C93E7B4047 /* Frameworks */,
+				F6AC9030287387BF00FA9117 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -242,15 +247,13 @@
 		F651E617285E45E500492244 /* Im Batman */ = {
 			isa = PBXGroup;
 			children = (
+				F63B43A72873E28300D317BA /* Fuentes */,
+				F64E4E1C2873D44A007E4D72 /* Controladores */,
 				F6608987285EBE090033EE2D /* Core */,
 				F69EEBBB285EAAD6009A89C4 /* Objetos */,
 				F66071872860E17300C635D3 /* Characters */,
 				F651E618285E45E500492244 /* AppDelegate.h */,
 				F651E619285E45E500492244 /* AppDelegate.m */,
-				F651E61B285E45E500492244 /* SceneDelegate.h */,
-				F651E61C285E45E500492244 /* SceneDelegate.m */,
-				F651E61E285E45E500492244 /* ViewController.h */,
-				F651E61F285E45E500492244 /* ViewController.m */,
 				F61663332862B11500B5B2C8 /* ViewController2.h */,
 				F61663342862B11500B5B2C8 /* ViewController2.m */,
 				F651E621285E45E500492244 /* Main.storyboard */,
@@ -320,6 +323,15 @@
 			path = Objetos;
 			sourceTree = "<group>";
 		};
+		F6AC9030287387BF00FA9117 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */,
+				F69EEB84285E5B6D009A89C4 /* Pods_Im_Batman_Im_BatmanUITests.framework */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -331,8 +343,8 @@
 				F651E611285E45E500492244 /* Sources */,
 				F651E612285E45E500492244 /* Frameworks */,
 				F651E613285E45E500492244 /* Resources */,
-				C47C632677CCE419B988DB18 /* [CP] Embed Pods Frameworks */,
 				F69EEBA1285E5B6D009A89C4 /* Embed Frameworks */,
+				BDFDCBFE888C3AFB377E3E1C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -370,7 +382,7 @@
 				F651E636285E45E600492244 /* Sources */,
 				F651E637285E45E600492244 /* Frameworks */,
 				F651E638285E45E600492244 /* Resources */,
-				70DE68B19B37B1C2FF031C91 /* [CP] Embed Pods Frameworks */,
+				651778D85ACE5938B25AC4C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -518,7 +530,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		70DE68B19B37B1C2FF031C91 /* [CP] Embed Pods Frameworks */ = {
+		651778D85ACE5938B25AC4C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -535,7 +547,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Im Batman-Im BatmanUITests/Pods-Im Batman-Im BatmanUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C47C632677CCE419B988DB18 /* [CP] Embed Pods Frameworks */ = {
+		BDFDCBFE888C3AFB377E3E1C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -561,6 +573,7 @@
 			files = (
 				F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */,
 				F651E620285E45E500492244 /* ViewController.m in Sources */,
+				F64E4E1F2873D463007E4D72 /* JasonTodd.m in Sources */,
 				F61663352862B11500B5B2C8 /* ViewController2.m in Sources */,
 				F651E61A285E45E500492244 /* AppDelegate.m in Sources */,
 				F6608976285EAFD40033EE2D /* charactersResults.m in Sources */,
@@ -572,7 +585,6 @@
 				F610FA7D2861376C00FCF8B6 /* charactersConductor.m in Sources */,
 				F660898A285EBE1E0033EE2D /* common.m in Sources */,
 				F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */,
-				F651E61D285E45E500492244 /* SceneDelegate.m in Sources */,
 				F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -750,6 +762,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A8883ZY4KT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/**",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Im Batman/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -779,8 +795,6 @@
 					"-framework",
 					"\"ISO8601DateFormatterValueTransformer\"",
 					"-framework",
-					"\"Lottie\"",
-					"-framework",
 					"\"MobileCoreServices\"",
 					"-framework",
 					"\"QuartzCore\"",
@@ -801,7 +815,7 @@
 					"-framework",
 					"\"UIKit\"",
 					"-all_load",
-					"-ObjC\n-ObjC\n",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-Batman";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -819,6 +833,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = A8883ZY4KT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"$(PROJECT_DIR)/**",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Im Batman/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -848,8 +866,6 @@
 					"-framework",
 					"\"ISO8601DateFormatterValueTransformer\"",
 					"-framework",
-					"\"Lottie\"",
-					"-framework",
 					"\"MobileCoreServices\"",
 					"-framework",
 					"\"QuartzCore\"",
@@ -870,7 +886,7 @@
 					"-framework",
 					"\"UIKit\"",
 					"-all_load",
-					"-ObjC\n-ObjC\n",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmz.Im-Batman";
 				PRODUCT_NAME = "$(TARGET_NAME)";
