@@ -12,5 +12,14 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>CCBiffBamBoom.ttf</string>
+		<string>crimefighter-bb.bold.ttf</string>
+		<string>KomikaDisplay</string>
+		<string>KomikaDisplay-Bold</string>
+		<string>KomikaDisplayTight</string>
+		<string>crimefighter-bb.regular.ttf</string>
+	</array>
 </dict>
 </plist>

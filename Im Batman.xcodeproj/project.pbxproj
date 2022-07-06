@@ -31,6 +31,19 @@
 		F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608982285EBCBB0033EE2D /* charactersResultsProps.m */; };
 		F6608986285EBD110033EE2D /* charactersResultsPropsItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */; };
 		F660898A285EBE1E0033EE2D /* common.m in Sources */ = {isa = PBXBuildFile; fileRef = F6608989285EBE1E0033EE2D /* common.m */; };
+		F67084BF2875323900FF21B5 /* KMKDSPK_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B32875323800FF21B5 /* KMKDSPK_.ttf */; };
+		F67084C02875323900FF21B5 /* KMKDSPB_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B42875323800FF21B5 /* KMKDSPB_.ttf */; };
+		F67084C12875323900FF21B5 /* crimefighter-bb.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B52875323800FF21B5 /* crimefighter-bb.regular.ttf */; };
+		F67084C22875323900FF21B5 /* KMKDSKBW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B62875323800FF21B5 /* KMKDSKBW.ttf */; };
+		F67084C32875323900FF21B5 /* KMKDSPSH.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B72875323800FF21B5 /* KMKDSPSH.ttf */; };
+		F67084C42875323900FF21B5 /* KMKDSPKB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B82875323800FF21B5 /* KMKDSPKB.ttf */; };
+		F67084C52875323900FF21B5 /* KMKDSPBW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084B92875323800FF21B5 /* KMKDSPBW.ttf */; };
+		F67084C62875323900FF21B5 /* KMKDSP__.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084BA2875323800FF21B5 /* KMKDSP__.ttf */; };
+		F67084C72875323900FF21B5 /* KMKDSPKW.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084BB2875323800FF21B5 /* KMKDSPKW.ttf */; };
+		F67084C82875323900FF21B5 /* crimefighter-bb.bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084BC2875323800FF21B5 /* crimefighter-bb.bold.ttf */; };
+		F67084C92875323900FF21B5 /* KMKDSPT_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084BD2875323800FF21B5 /* KMKDSPT_.ttf */; };
+		F67084CA2875323900FF21B5 /* KMKDSPW_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084BE2875323900FF21B5 /* KMKDSPW_.ttf */; };
+		F67084CC287532E600FF21B5 /* CCBiffBamBoom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F67084CB287532E600FF21B5 /* CCBiffBamBoom.ttf */; };
 		F69EEBA5285E5DF0009A89C4 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA4285E5DF0009A89C4 /* CFNetwork.framework */; };
 		F69EEBA7285E5DFA009A89C4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA6285E5DFA009A89C4 /* CoreData.framework */; };
 		F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA8285E5E00009A89C4 /* Security.framework */; };
@@ -115,6 +128,19 @@
 		F6608985285EBD110033EE2D /* charactersResultsPropsItems.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = charactersResultsPropsItems.m; sourceTree = "<group>"; };
 		F6608988285EBE1E0033EE2D /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 		F6608989285EBE1E0033EE2D /* common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = common.m; sourceTree = "<group>"; };
+		F67084B32875323800FF21B5 /* KMKDSPK_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPK_.ttf; sourceTree = "<group>"; };
+		F67084B42875323800FF21B5 /* KMKDSPB_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPB_.ttf; sourceTree = "<group>"; };
+		F67084B52875323800FF21B5 /* crimefighter-bb.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "crimefighter-bb.regular.ttf"; sourceTree = "<group>"; };
+		F67084B62875323800FF21B5 /* KMKDSKBW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSKBW.ttf; sourceTree = "<group>"; };
+		F67084B72875323800FF21B5 /* KMKDSPSH.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPSH.ttf; sourceTree = "<group>"; };
+		F67084B82875323800FF21B5 /* KMKDSPKB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPKB.ttf; sourceTree = "<group>"; };
+		F67084B92875323800FF21B5 /* KMKDSPBW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPBW.ttf; sourceTree = "<group>"; };
+		F67084BA2875323800FF21B5 /* KMKDSP__.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSP__.ttf; sourceTree = "<group>"; };
+		F67084BB2875323800FF21B5 /* KMKDSPKW.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPKW.ttf; sourceTree = "<group>"; };
+		F67084BC2875323800FF21B5 /* crimefighter-bb.bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "crimefighter-bb.bold.ttf"; sourceTree = "<group>"; };
+		F67084BD2875323800FF21B5 /* KMKDSPT_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPT_.ttf; sourceTree = "<group>"; };
+		F67084BE2875323900FF21B5 /* KMKDSPW_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = KMKDSPW_.ttf; sourceTree = "<group>"; };
+		F67084CB287532E600FF21B5 /* CCBiffBamBoom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CCBiffBamBoom.ttf; sourceTree = "<group>"; };
 		F69EEB80285E5B6D009A89C4 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB81285E5B6D009A89C4 /* ISO8601DateFormatterValueTransformer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ISO8601DateFormatterValueTransformer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F69EEB83285E5B6D009A89C4 /* Pods_Im_Batman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Im_Batman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +232,19 @@
 		F63B43A72873E28300D317BA /* Fuentes */ = {
 			isa = PBXGroup;
 			children = (
+				F67084CB287532E600FF21B5 /* CCBiffBamBoom.ttf */,
+				F67084BC2875323800FF21B5 /* crimefighter-bb.bold.ttf */,
+				F67084B52875323800FF21B5 /* crimefighter-bb.regular.ttf */,
+				F67084B62875323800FF21B5 /* KMKDSKBW.ttf */,
+				F67084BA2875323800FF21B5 /* KMKDSP__.ttf */,
+				F67084B42875323800FF21B5 /* KMKDSPB_.ttf */,
+				F67084B92875323800FF21B5 /* KMKDSPBW.ttf */,
+				F67084B32875323800FF21B5 /* KMKDSPK_.ttf */,
+				F67084B82875323800FF21B5 /* KMKDSPKB.ttf */,
+				F67084BB2875323800FF21B5 /* KMKDSPKW.ttf */,
+				F67084B72875323800FF21B5 /* KMKDSPSH.ttf */,
+				F67084BD2875323800FF21B5 /* KMKDSPT_.ttf */,
+				F67084BE2875323900FF21B5 /* KMKDSPW_.ttf */,
 			);
 			path = Fuentes;
 			sourceTree = "<group>";
@@ -441,7 +480,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67084CA2875323900FF21B5 /* KMKDSPW_.ttf in Resources */,
+				F67084C72875323900FF21B5 /* KMKDSPKW.ttf in Resources */,
+				F67084C02875323900FF21B5 /* KMKDSPB_.ttf in Resources */,
+				F67084C82875323900FF21B5 /* crimefighter-bb.bold.ttf in Resources */,
+				F67084C62875323900FF21B5 /* KMKDSP__.ttf in Resources */,
+				F67084BF2875323900FF21B5 /* KMKDSPK_.ttf in Resources */,
 				F651E628285E45E500492244 /* LaunchScreen.storyboard in Resources */,
+				F67084CC287532E600FF21B5 /* CCBiffBamBoom.ttf in Resources */,
+				F67084C22875323900FF21B5 /* KMKDSKBW.ttf in Resources */,
+				F67084C92875323900FF21B5 /* KMKDSPT_.ttf in Resources */,
+				F67084C12875323900FF21B5 /* crimefighter-bb.regular.ttf in Resources */,
+				F67084C52875323900FF21B5 /* KMKDSPBW.ttf in Resources */,
+				F67084C32875323900FF21B5 /* KMKDSPSH.ttf in Resources */,
+				F67084C42875323900FF21B5 /* KMKDSPKB.ttf in Resources */,
 				F651E625285E45E500492244 /* Assets.xcassets in Resources */,
 				F651E623285E45E500492244 /* Main.storyboard in Resources */,
 			);
