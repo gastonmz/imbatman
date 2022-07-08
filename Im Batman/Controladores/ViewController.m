@@ -63,7 +63,7 @@
 
     
 
-    [self.view addSubview:aa];
+  //  [self.view addSubview:aa];
 //    [self.view addSubview:cc];
 
     
@@ -98,18 +98,21 @@
     // Ultima boludez primero...
     void (^bangeamela)(void) = ^{
         [UIView animateWithDuration:0.1f
-                              delay:0.3f
+                              delay:0.2f
                             options:UIViewAnimationOptionCurveEaseIn
                          animations:^{
                                     [self.explosion setAlpha:0.0f];
                                     [self.bang setAlpha:1.0f];
                          }
-                         completion:nil];
+                         completion:^(BOOL finished) {
+                           // Carga Principal
+                                [self _showTransitionA];
+                        }];
       };
     
     // Segunda boludez, segundo...
     void (^subimela)(void) = ^{
-        [UIView animateWithDuration:0.4f
+        [UIView animateWithDuration:0.3f
                               delay:0.0f
                             options:UIViewAnimationOptionCurveEaseIn
                          animations:^{
@@ -122,7 +125,7 @@
       };
       
       // Acá arrancamos
-      [UIView animateWithDuration:0.8f
+      [UIView animateWithDuration:0.5f
                             delay:0.0f
                           options:UIViewAnimationOptionCurveEaseIn
                        animations:^{

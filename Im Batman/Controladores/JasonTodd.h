@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JasonTodd : UIViewController
+@interface JasonTodd : UIViewController <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *fondo;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenNube;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenBurbuja;

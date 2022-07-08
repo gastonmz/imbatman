@@ -25,6 +25,7 @@ NSUserDefaults* defaults;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    
     [self initConfig];
     [self HeroeDelDia];
 }
@@ -62,15 +63,41 @@ NSUserDefaults* defaults;
     tSDLF = CGAffineTransformConcat(CGAffineTransformTranslate(tSDLF, 2, -8),CGAffineTransformRotate(tSDLF, -0.05));
     _labelTituloSDLF.transform = tSDLF;
     
+    // Configura botones
     [_botonBH.titleLabel setFont:[UIFont fontWithName:@"CrimeFighterBB" size:12]];
     [_botonBH.titleLabel setTextColor:[UIColor blackColor]];
     [_botonHDD.titleLabel setFont:[UIFont fontWithName:@"CrimeFighterBB" size:12]];
     [_botonHDD.titleLabel setTextColor:[UIColor blackColor]];
-
+    
+    // Configura Fuentes y etiquetas
     [_labelTextoBH setFont:[UIFont fontWithName:@"CrimeFighterBB" size:10]];
+    [_labelBotonLH setFont:[UIFont fontWithName:@"CrimeFighterBB" size:11]];
+    [_labelDetalleHDD setFont:[UIFont fontWithName:@"CrimeFighterBB" size:11]];
+    
+    [_labelNombreHDD setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:40]];
+    _labelNombreHDD.numberOfLines = 1;
+    _labelNombreHDD.adjustsFontSizeToFitWidth = YES;
+    [_labelNombreHDD setMinimumScaleFactor:20.0f/40.0f];
+    [_labelNombreHDD.superview layoutSubviews];
+    
+    //Configura imagen Heroe del Dia
+    [_imagenHeroeDelDia setContentMode:UIViewContentModeScaleAspectFit];
+    [_imagenHeroeDelDia setBackgroundColor:[UIColor clearColor]];
+    
+    // Configura Salon de la fama
+    [_labelSDLF01 setText:@"SUPER HEROE XXX BLA BLA BLA"];
 
     
+    [_labelSDLF01 setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
+    [_labelSDLF02 setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
+    [_labelSDLF03  setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
+    
 
+    // Configura acciones del campo de texto
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bajameElTeclado)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    gestureRecognizer.cancelsTouchesInView = NO;
+    _textoBH.delegate = self;
 
 }
 
@@ -78,7 +105,7 @@ NSUserDefaults* defaults;
     
     
     if (![defaults objectForKey:@"HeroeDelDia"]) {
-
+       
         // Obtiene un valor aleatorio de un heroe de Marvel
         unsigned int rnd = arc4random_uniform([HEROES_LISTA count]);
         NSString* randomLetra = [HEROES_LISTA objectAtIndex:rnd];
@@ -96,6 +123,11 @@ NSUserDefaults* defaults;
                 [heroe setValue:resultados.data.results[0].name forKey:@"nombre"];
                 [heroe setValue:resultados.data.results[0].description forKey:@"detalle"];
                 [heroe setValue:[NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension] forKey:@"imagen"];
+                NSDateFormatter *formateo = [[NSDateFormatter alloc] init];
+                [formateo setDateFormat:@"dd-MM-yyyy"];
+                NSDate *fecha = [NSDate date];
+                [heroe setObject:[formateo stringFromDate:fecha] forKey:@"fecha"];
+
                 [defaults setObject:heroe forKey:@"HeroeDelDia"];
                 
                 [self muestraHeroeDelDia];
@@ -104,24 +136,60 @@ NSUserDefaults* defaults;
         }];
         
     } else {
-        [self muestraHeroeDelDia];
+        if ([self esTiempoDeCambiarDeHeroe:[[defaults objectForKey:@"HeroeDelDia"] objectForKey:@"fecha"]]) {
+            [defaults removeObjectForKey:@"HeroeDelDia"];
+            [self HeroeDelDia];
+        } else {
+            [self muestraHeroeDelDia];
+        }
     }
+}
+
+- (BOOL) esTiempoDeCambiarDeHeroe:(NSString*)fechaGuardada {
+        
+    // Verifica si paso el dia y cambia de Heroe del dia
+    NSDateFormatter *formateo = [[NSDateFormatter alloc] init];
+    [formateo setDateFormat:@"dd-MM-yyyy"];
+    NSDate *fecha = [NSDate date];
+    NSString *fechaHoy = [formateo stringFromDate:fecha];
+   
+    NSDate *inicio = [formateo dateFromString:fechaGuardada];
+    NSDate *fin = [formateo dateFromString:fechaHoy];
+
+    NSCalendar *calendario = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *respuesta = [calendario components:NSCalendarUnitDay
+                                                        fromDate:inicio
+                                                          toDate:fin
+                                                         options:0];
     
-    
+    return respuesta == 0 ? YES : NO;
+
 }
 
 - (void) muestraHeroeDelDia {
 
     NSDictionary* heroe = [[NSDictionary alloc] initWithDictionary:[defaults objectForKey:@"HeroeDelDia"]];
-    [_labelNombreHDD setText:[heroe valueForKey:@"nombre"]];
-    [_labelDetalleHDD setText:[heroe valueForKey:@"detalle"]];
+    [_labelNombreHDD setText:[[heroe valueForKey:@"nombre"] uppercaseString]];
+    [_labelDetalleHDD setText:[[heroe valueForKey:@"detalle"] isEqualToString:@""] ? NO_HAY_DETALLE : [heroe valueForKey:@"detalle"]];
     [_imagenHeroeDelDia sd_setImageWithURL:[heroe valueForKey:@"imagen"]
-                          placeholderImage:nil];
+                          placeholderImage:[UIImage imageNamed:@"sinFoto"]];
 
+}
+
+- (void)bajameElTeclado
+{
+     [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
 #pragma mark - Navigation
+ 
+ 
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
