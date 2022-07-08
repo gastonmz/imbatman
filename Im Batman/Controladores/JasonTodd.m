@@ -10,6 +10,7 @@
 #import "common.h"
 #import "../Objetos/characters.h"
 #import "../Characters/charactersConductor.h"
+#import "DamianWayne.h"
 @import SDWebImage;
 
 @interface JasonTodd ()
@@ -158,7 +159,7 @@ NSUserDefaults* defaults;
         }];
         
     } else {
-        if ([self esTiempoDeCambiarDeHeroe:[[defaults objectForKey:@"HeroeDelDia"] objectForKey:@"fecha"]]) {
+        if ((BOOL)[self esTiempoDeCambiarDeHeroe:[[defaults objectForKey:@"HeroeDelDia"] objectForKey:@"fecha"]]) {
             [defaults removeObjectForKey:@"HeroeDelDia"];
             [self HeroeDelDia];
         } else {
@@ -184,7 +185,7 @@ NSUserDefaults* defaults;
                                                           toDate:fin
                                                          options:0];
     
-    return respuesta == 0 ? YES : NO;
+    return respuesta.day == 0 ? NO : YES;
 
 }
 
@@ -220,4 +221,17 @@ NSUserDefaults* defaults;
 }
 */
 
+- (IBAction)buscarHeroes:(id)sender {
+    
+}
+
+- (IBAction)verHeroeDelDia:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    DamianWayne *vc = [storyboard instantiateViewControllerWithIdentifier:@"DamianWayne"];
+    vc.idCaracter = (NSNumber*)[[defaults objectForKey:@"HeroeDelDia"] valueForKey:@"id"];
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:vc animated:NO completion:nil];
+    
+}
 @end

@@ -56,6 +56,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *imagenSDLF03;
 @property (weak, nonatomic) IBOutlet UILabel *labelSDLF03;
 
+// Acciones
+- (IBAction)verHeroeDelDia:(id)sender;
+- (IBAction)buscarHeroes:(id)sender;
+
+
 @end
 
 NS_ASSUME_NONNULL_END
