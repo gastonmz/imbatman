@@ -49,6 +49,7 @@
 		F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA8285E5E00009A89C4 /* Security.framework */; };
 		F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */; };
 		F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */ = {isa = PBXBuildFile; fileRef = F69EEBBD285EAAF5009A89C4 /* characters.m */; };
+		F6EE54382877BE150083CB91 /* DamianWayne.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE54372877BE150083CB91 /* DamianWayne.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +159,8 @@
 		F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F69EEBBC285EAAF5009A89C4 /* characters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = characters.h; sourceTree = "<group>"; };
 		F69EEBBD285EAAF5009A89C4 /* characters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = characters.m; sourceTree = "<group>"; };
+		F6EE54362877BE150083CB91 /* DamianWayne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DamianWayne.h; sourceTree = "<group>"; };
+		F6EE54372877BE150083CB91 /* DamianWayne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamianWayne.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +259,8 @@
 				F651E61F285E45E500492244 /* ViewController.m */,
 				F64E4E1D2873D463007E4D72 /* JasonTodd.h */,
 				F64E4E1E2873D463007E4D72 /* JasonTodd.m */,
+				F6EE54362877BE150083CB91 /* DamianWayne.h */,
+				F6EE54372877BE150083CB91 /* DamianWayne.m */,
 			);
 			path = Controladores;
 			sourceTree = "<group>";
@@ -629,6 +634,7 @@
 				F61663352862B11500B5B2C8 /* ViewController2.m in Sources */,
 				F651E61A285E45E500492244 /* AppDelegate.m in Sources */,
 				F6608976285EAFD40033EE2D /* charactersResults.m in Sources */,
+				F6EE54382877BE150083CB91 /* DamianWayne.m in Sources */,
 				F651E62B285E45E500492244 /* main.m in Sources */,
 				F6608980285EB9C70033EE2D /* charactersResultsUrls.m in Sources */,
 				F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */,

@@ -85,14 +85,35 @@ NSUserDefaults* defaults;
     [_imagenHeroeDelDia setBackgroundColor:[UIColor clearColor]];
     
     // Configura Salon de la fama
-    [_labelSDLF01 setText:@"SUPER HEROE XXX BLA BLA BLA"];
-
     
+    NSMutableParagraphStyle *estilo =  [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+    estilo.alignment = NSTextAlignmentJustified;
+    estilo.firstLineHeadIndent = 5.0f;
+
+    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:@"SUPER HEROE XXX BLA BLA BLA" attributes:@{ NSParagraphStyleAttributeName : estilo}];
+
+    _labelSDLF01.attributedText = attrText;
+    
+ //   [_labelSDLF01 setText:@"SUPER HEROE XXX BLA BLA BLA"];
+
+    [_imagenSDLF01 setBackgroundColor:[UIColor clearColor]];
+    [_imagenSDLF02 setBackgroundColor:[UIColor clearColor]];
+    [_imagenSDLF03 setBackgroundColor:[UIColor clearColor]];
+
     [_labelSDLF01 setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
     [_labelSDLF02 setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
-    [_labelSDLF03  setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
-    
+    [_labelSDLF03 setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:11]];
+    [_labelSDLF01 setTextColor:[UIColor whiteColor]];
+    [_labelSDLF02 setTextColor:[UIColor whiteColor]];
+    [_labelSDLF03 setTextColor:[UIColor whiteColor]];
+    [_labelSDLF01 setBackgroundColor:[UIColor colorWithRed:94.0f/255.0f green:23.0f/255.0f blue:135.0f/255.0f alpha:0.7]];
+    [_labelSDLF02 setBackgroundColor:[UIColor colorWithRed:94.0f/255.0f green:23.0f/255.0f blue:135.0f/255.0f alpha:0.7]];
+    [_labelSDLF03 setBackgroundColor:[UIColor colorWithRed:94.0f/255.0f green:23.0f/255.0f blue:135.0f/255.0f alpha:0.7]];
 
+
+
+
+    
     // Configura acciones del campo de texto
     UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(bajameElTeclado)];
     [self.view addGestureRecognizer:gestureRecognizer];
@@ -100,6 +121,7 @@ NSUserDefaults* defaults;
     _textoBH.delegate = self;
 
 }
+
 
 - (void) HeroeDelDia {
     
