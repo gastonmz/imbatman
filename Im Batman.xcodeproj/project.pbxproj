@@ -50,6 +50,8 @@
 		F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */; };
 		F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */ = {isa = PBXBuildFile; fileRef = F69EEBBD285EAAF5009A89C4 /* characters.m */; };
 		F6EE54382877BE150083CB91 /* DamianWayne.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE54372877BE150083CB91 /* DamianWayne.m */; };
+		F6F717182880F3C6009A6828 /* flash_load.json in Resources */ = {isa = PBXBuildFile; fileRef = F6F717172880F3C6009A6828 /* flash_load.json */; };
+		F6F7171B28810234009A6828 /* ahiVamos.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F7171A28810234009A6828 /* ahiVamos.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +163,9 @@
 		F69EEBBD285EAAF5009A89C4 /* characters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = characters.m; sourceTree = "<group>"; };
 		F6EE54362877BE150083CB91 /* DamianWayne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DamianWayne.h; sourceTree = "<group>"; };
 		F6EE54372877BE150083CB91 /* DamianWayne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamianWayne.m; sourceTree = "<group>"; };
+		F6F717172880F3C6009A6828 /* flash_load.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flash_load.json; sourceTree = "<group>"; };
+		F6F7171928810234009A6828 /* ahiVamos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ahiVamos.h; sourceTree = "<group>"; };
+		F6F7171A28810234009A6828 /* ahiVamos.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ahiVamos.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,8 +345,11 @@
 		F6608987285EBE090033EE2D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F6F717172880F3C6009A6828 /* flash_load.json */,
 				F6608988285EBE1E0033EE2D /* common.h */,
 				F6608989285EBE1E0033EE2D /* common.m */,
+				F6F7171928810234009A6828 /* ahiVamos.h */,
+				F6F7171A28810234009A6828 /* ahiVamos.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -496,6 +504,7 @@
 				F67084C22875323900FF21B5 /* KMKDSKBW.ttf in Resources */,
 				F67084C92875323900FF21B5 /* KMKDSPT_.ttf in Resources */,
 				F67084C12875323900FF21B5 /* crimefighter-bb.regular.ttf in Resources */,
+				F6F717182880F3C6009A6828 /* flash_load.json in Resources */,
 				F67084C52875323900FF21B5 /* KMKDSPBW.ttf in Resources */,
 				F67084C32875323900FF21B5 /* KMKDSPSH.ttf in Resources */,
 				F67084C42875323900FF21B5 /* KMKDSPKB.ttf in Resources */,
@@ -628,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F7171B28810234009A6828 /* ahiVamos.m in Sources */,
 				F610FA7A28611A5500FCF8B6 /* charactersFabrica.m in Sources */,
 				F651E620285E45E500492244 /* ViewController.m in Sources */,
 				F64E4E1F2873D463007E4D72 /* JasonTodd.m in Sources */,

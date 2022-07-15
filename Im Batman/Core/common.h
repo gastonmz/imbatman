@@ -30,6 +30,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface common : NSObject
 + (NSString *) md5:(NSString *) input;
 + (NSString *) createMarvelHash: (NSString*)ts;
++ (NSDictionary *)JSONFromFile: (NSString*)anim;
+
 @end
 
 NS_ASSUME_NONNULL_END

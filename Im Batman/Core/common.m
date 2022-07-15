@@ -26,5 +26,11 @@
 + (NSString *) createMarvelHash: (NSString*)ts{
     return [self md5:[NSString stringWithFormat:@"%@%@%@",ts,MARVEL_PRIVATE_KEY,MARVEL_PUBLIC_KEY]];
 }
+
++ (NSDictionary *)JSONFromFile: (NSString*)anim {
+    NSString *path = [[NSBundle mainBundle] pathForResource:anim ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+}
 @end
 

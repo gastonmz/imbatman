@@ -11,7 +11,10 @@
 #import "../Objetos/characters.h"
 #import "../Characters/charactersConductor.h"
 #import "DamianWayne.h"
+#import "../Core/ahiVamos.h"
+
 @import SDWebImage;
+@import Lottie;
 
 @interface JasonTodd ()
 
@@ -26,9 +29,11 @@ NSUserDefaults* defaults;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [ahiVamos animame:self];
     
     [self initConfig];
     [self HeroeDelDia];
+    
 }
 
 - (void) initConfig {
@@ -141,19 +146,25 @@ NSUserDefaults* defaults;
                 // ver que hacemos con el error
             }
             if (exito) {
-                NSMutableDictionary* heroe = [[NSMutableDictionary alloc] init];
-                [heroe setValue:resultados.data.results[0].id forKey:@"id"];
-                [heroe setValue:resultados.data.results[0].name forKey:@"nombre"];
-                [heroe setValue:resultados.data.results[0].description forKey:@"detalle"];
-                [heroe setValue:[NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension] forKey:@"imagen"];
-                NSDateFormatter *formateo = [[NSDateFormatter alloc] init];
-                [formateo setDateFormat:@"dd-MM-yyyy"];
-                NSDate *fecha = [NSDate date];
-                [heroe setObject:[formateo stringFromDate:fecha] forKey:@"fecha"];
-
-                [defaults setObject:heroe forKey:@"HeroeDelDia"];
                 
-                [self muestraHeroeDelDia];
+                // chequeamos que al menos consigamos un heroe con data... sino buscamos de nuevo...
+                if ([resultados.data.results[0].description isEqualToString:@""]) {
+                    [self HeroeDelDia];
+                } else {
+                    NSMutableDictionary* heroe = [[NSMutableDictionary alloc] init];
+                    [heroe setValue:resultados.data.results[0].id forKey:@"id"];
+                    [heroe setValue:resultados.data.results[0].name forKey:@"nombre"];
+                    [heroe setValue:resultados.data.results[0].description forKey:@"detalle"];
+                    [heroe setValue:[NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension] forKey:@"imagen"];
+                    NSDateFormatter *formateo = [[NSDateFormatter alloc] init];
+                    [formateo setDateFormat:@"dd-MM-yyyy"];
+                    NSDate *fecha = [NSDate date];
+                    [heroe setObject:[formateo stringFromDate:fecha] forKey:@"fecha"];
+
+                    [defaults setObject:heroe forKey:@"HeroeDelDia"];
+                    
+                    [self muestraHeroeDelDia];
+                }
             }
     
         }];
@@ -196,6 +207,8 @@ NSUserDefaults* defaults;
     [_labelDetalleHDD setText:[[heroe valueForKey:@"detalle"] isEqualToString:@""] ? NO_HAY_DETALLE : [heroe valueForKey:@"detalle"]];
     [_imagenHeroeDelDia sd_setImageWithURL:[heroe valueForKey:@"imagen"]
                           placeholderImage:[UIImage imageNamed:@"sinFoto"]];
+    
+    [ahiVamos desAnimame:self];
 
 }
 
