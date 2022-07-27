@@ -10,6 +10,8 @@
 #import "common.h"
 #import "../Objetos/characters.h"
 #import "../Characters/charactersConductor.h"
+#import "../Core/ahiVamos.h"
+
 @import SDWebImage;
 
 @interface DamianWayne ()
@@ -25,6 +27,9 @@ NSUserDefaults* defaultsDW;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [ahiVamos animame:self];
+
     
     [self initConfig];
     [self obtieneHeroe];
@@ -111,6 +116,8 @@ NSUserDefaults* defaultsDW;
 
             [self guardarHeroe:[resultados.data.results[0].id intValue] nombre:resultados.data.results[0].name imagen:imagen];
        }
+
+        [ahiVamos desAnimame];
 
     }];
 }

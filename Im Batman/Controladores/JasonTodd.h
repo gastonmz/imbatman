@@ -13,7 +13,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JasonTodd : UIViewController <UITextFieldDelegate>
+@interface JasonTodd : UIViewController <UITextFieldDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *fondo;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenNube;
 @property (weak, nonatomic) IBOutlet UIImageView *imagenBurbuja;
@@ -60,6 +60,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)verHeroeDelDia:(id)sender;
 - (IBAction)buscarHeroes:(id)sender;
 
+
+@end
+
+@interface HeroeTapGestureRecognizer : UITapGestureRecognizer
+
+@property (nonatomic, strong) NSNumber *idHeroe;
 
 @end
 

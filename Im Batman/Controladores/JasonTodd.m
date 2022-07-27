@@ -22,6 +22,10 @@
 
 NSUserDefaults* defaults;
 
+@implementation HeroeTapGestureRecognizer
+
+@end
+
 @implementation JasonTodd
 
 
@@ -222,12 +226,32 @@ NSUserDefaults* defaults;
         UILabel* lNombre = (UILabel *)[self.view viewWithTag:(i+1)*100];
         UIImageView* iImagen = (UIImageView*)[self.view viewWithTag:(i+1)*10];
         
-        [lNombre setText:[[heroesGuardados objectAtIndex:i] objectForKey:@"nombre"]];
+        [lNombre setText:[NSString stringWithFormat:@" %@ ", [[heroesGuardados objectAtIndex:i] objectForKey:@"nombre"]]];
         [iImagen sd_setImageWithURL:[[heroesGuardados objectAtIndex:i] objectForKey:@"imagen"]];
+        [iImagen setContentMode:UIViewContentModeScaleAspectFill];
+        [iImagen setUserInteractionEnabled:YES];
+        
+        HeroeTapGestureRecognizer *tapHeroe = [[HeroeTapGestureRecognizer alloc] initWithTarget:self  action:@selector(tapSobreHeroe:)];
+        tapHeroe.numberOfTapsRequired = 1;
+        tapHeroe.idHeroe = [[heroesGuardados objectAtIndex:i] objectForKey:@"id"];
+        [tapHeroe setDelegate:self];
+        [iImagen addGestureRecognizer:tapHeroe];
         
     }
     
 }
+
+- (void) tapSobreHeroe: (id)sender {
+    
+    HeroeTapGestureRecognizer *tap = (HeroeTapGestureRecognizer *)sender;
+
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    DamianWayne *vc = [storyboard instantiateViewControllerWithIdentifier:@"DamianWayne"];
+    vc.idCaracter = tap.idHeroe;
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:vc animated:NO completion:nil];
+    
+ }
 
 - (void)bajameElTeclado
 {
