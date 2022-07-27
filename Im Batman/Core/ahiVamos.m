@@ -41,7 +41,7 @@ UIView* laAnimacionVista;
     [donde.view addSubview:laAnimacionVista];
 }
 
-+(void)desAnimame: (UIViewController*) donde {
++(void)desAnimame {
     
     [laAnimacionVista removeFromSuperview];
     

@@ -81,10 +81,10 @@ NSUserDefaults* defaultsDW;
     [_labelDetalle setFont:[UIFont fontWithName:@"CrimeFighterBB" size:12]];
 
     
-    [_labelCarreraTotalSeries setText:@"999"];
-    [_labelCarreraTotalEventos setText:@"999"];
-    [_labelCarreraTotalComics setText:@"999"];
-    [_labelCarreraTotalHistorias setText:@"999"];
+    [_labelCarreraTotalSeries setText:@""];
+    [_labelCarreraTotalEventos setText:@""];
+    [_labelCarreraTotalComics setText:@""];
+    [_labelCarreraTotalHistorias setText:@""];
     
     [_imagenHeroe setContentMode:UIViewContentModeScaleAspectFit];
     [_imagenHeroe setClipsToBounds:YES];
@@ -102,17 +102,55 @@ NSUserDefaults* defaultsDW;
         }
         if (exito) {
             
+            NSString* imagen = [NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension];
+            
             [self->_labelNombre setText:resultados.data.results[0].name];
             [self->_labelDetalle setText:[resultados.data.results[0].description isEqualToString:@""]  ? NO_HAY_DETALLE : resultados.data.results[0].description];
-            [self->_imagenHeroe sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension]]
+            [self->_imagenHeroe sd_setImageWithURL:[NSURL URLWithString:imagen]
                                   placeholderImage:[UIImage imageNamed:@"sinFoto"]];
 
-
-            
-
+            [self guardarHeroe:[resultados.data.results[0].id intValue] nombre:resultados.data.results[0].name imagen:imagen];
        }
 
     }];
+}
+
+- (void) guardarHeroe: (int)idHeroe nombre:(NSString*)nombre imagen:(NSString*)imagen {
+    
+    NSMutableArray* heroesGuardados = [[NSMutableArray alloc] initWithArray:[defaultsDW objectForKey:@"heroesGuardados"]];
+
+    if (![self existeHeroe:idHeroe libreria:heroesGuardados]) {
+        
+        // si tiene los 4 heroes guardados elimina el primero
+        if ([heroesGuardados count] >= 3) {
+            [heroesGuardados removeObjectAtIndex:0];
+        }
+        
+        // Guarda Heroe
+        NSMutableDictionary* heroe = [[NSMutableDictionary alloc] init];
+        [heroe setObject:[NSNumber numberWithInt:idHeroe] forKey:@"id"];
+        [heroe setObject:nombre forKey:@"nombre"];
+        [heroe setObject:imagen forKey:@"imagen"];
+        [heroesGuardados addObject:heroe];
+        [defaultsDW setObject:heroesGuardados forKey:@"heroesGuardados"];
+        
+ 
+    }
+}
+
+- (BOOL) existeHeroe: (int)idHeroe libreria:(NSArray*)libreria {
+    
+    if (libreria) {
+        for (int i = 0; i < [libreria count]; i++) {
+            if ([[[libreria objectAtIndex:i] objectForKey:@"id"] intValue] == idHeroe) {
+                return YES;
+            }
+        }
+        return NO;
+    } else {
+        return NO;
+    }
+
 }
 /*
 #pragma mark - Navigation

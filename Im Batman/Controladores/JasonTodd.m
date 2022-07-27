@@ -33,6 +33,8 @@ NSUserDefaults* defaults;
     
     [self initConfig];
     [self HeroeDelDia];
+    [self cargaHeroesGuardados];
+    
     
 }
 
@@ -208,8 +210,23 @@ NSUserDefaults* defaults;
     [_imagenHeroeDelDia sd_setImageWithURL:[heroe valueForKey:@"imagen"]
                           placeholderImage:[UIImage imageNamed:@"sinFoto"]];
     
-    [ahiVamos desAnimame:self];
+    [ahiVamos desAnimame];
 
+}
+
+- (void) cargaHeroesGuardados {
+    
+    NSMutableArray* heroesGuardados = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"heroesGuardados"]];
+
+    for (int i = 0; i < [heroesGuardados count]; i++) {
+        UILabel* lNombre = (UILabel *)[self.view viewWithTag:(i+1)*100];
+        UIImageView* iImagen = (UIImageView*)[self.view viewWithTag:(i+1)*10];
+        
+        [lNombre setText:[[heroesGuardados objectAtIndex:i] objectForKey:@"nombre"]];
+        [iImagen sd_setImageWithURL:[[heroesGuardados objectAtIndex:i] objectForKey:@"imagen"]];
+        
+    }
+    
 }
 
 - (void)bajameElTeclado
