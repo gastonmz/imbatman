@@ -145,7 +145,7 @@
 
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:
                                  @"Main" bundle:[NSBundle mainBundle]];
-     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"JasonToddVista"];
+     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:ORIGEN_HOME];
     [vc setModalPresentationStyle:UIModalPresentationFullScreen];
      [self presentViewController:vc animated:NO completion:nil];
     

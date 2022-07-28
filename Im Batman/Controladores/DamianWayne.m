@@ -59,7 +59,7 @@ NSUserDefaults* defaultsDW;
 
     
     // Configura Nombre de Heroe
-    [_labelNombre setText:@"NOMBRE DEL HEROE"];
+    [_labelNombre setText:@"s"];
     [_labelNombre setFont:[UIFont fontWithName:@"CCBiffBamBoom" size:30]];
     _labelNombre.numberOfLines = 1;
     _labelNombre.adjustsFontSizeToFitWidth = YES;
@@ -84,7 +84,6 @@ NSUserDefaults* defaultsDW;
     [_labelCarreraTotalHistorias setFont:[UIFont fontWithName:@"CCBiffBamBoom" size:14]];
     [_labelVolver setFont:[UIFont fontWithName:@"KomikaDisplayTight" size:22]];
     [_labelDetalle setFont:[UIFont fontWithName:@"CrimeFighterBB" size:12]];
-
     
     [_labelCarreraTotalSeries setText:@""];
     [_labelCarreraTotalEventos setText:@""];
@@ -94,8 +93,24 @@ NSUserDefaults* defaultsDW;
     [_imagenHeroe setContentMode:UIViewContentModeScaleAspectFit];
     [_imagenHeroe setClipsToBounds:YES];
     //[_imagenHeroe setFrame:CGRectMake(0,  _imagenFondoHeroe.frame.origin.y, _imagenHeroe.frame.size.width, _imagenHeroe.frame.size.height)];
-    
+
+    // Configura imagen volver con un tap
+    UITapGestureRecognizer *tapVolver = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(volver:)];
+    [tapVolver setNumberOfTapsRequired:1];
+    [_labelVolver setUserInteractionEnabled:YES];
+    [tapVolver setDelegate:self];
+    [_labelVolver addGestureRecognizer:tapVolver];
+
 }
+
+- (void) volver: (UITapGestureRecognizer*)gesture {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:self.origen];
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:vc animated:NO completion:nil];
+    
+ }
 
 - (void) obtieneHeroe {
     

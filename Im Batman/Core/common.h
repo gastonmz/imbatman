@@ -24,6 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define PANTALLA_LARGO ([[UIScreen mainScreen] bounds].size.width)
 #define PANTALLA_ALTO ([[UIScreen mainScreen] bounds].size.height)
 
+#define ORIGEN_HOME @"JasonTodd"
+#define ORIGEN_LISTADO @"DickGrayson"
 
 #define NO_HAY_DETALLE @"Lo sentimos\npero de momento no tenemos nada revelador de este heroe..."
 

@@ -98,16 +98,6 @@ NSUserDefaults* defaults;
     
     // Configura Salon de la fama
     
-    NSMutableParagraphStyle *estilo =  [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
-    estilo.alignment = NSTextAlignmentJustified;
-    estilo.firstLineHeadIndent = 5.0f;
-
-    NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:@"SUPER HEROE XXX BLA BLA BLA" attributes:@{ NSParagraphStyleAttributeName : estilo}];
-
-    _labelSDLF01.attributedText = attrText;
-    
- //   [_labelSDLF01 setText:@"SUPER HEROE XXX BLA BLA BLA"];
-
     [_imagenSDLF01 setBackgroundColor:[UIColor clearColor]];
     [_imagenSDLF02 setBackgroundColor:[UIColor clearColor]];
     [_imagenSDLF03 setBackgroundColor:[UIColor clearColor]];
@@ -121,9 +111,6 @@ NSUserDefaults* defaults;
     [_labelSDLF01 setBackgroundColor:[UIColor colorWithRed:94.0f/255.0f green:23.0f/255.0f blue:135.0f/255.0f alpha:0.7]];
     [_labelSDLF02 setBackgroundColor:[UIColor colorWithRed:94.0f/255.0f green:23.0f/255.0f blue:135.0f/255.0f alpha:0.7]];
     [_labelSDLF03 setBackgroundColor:[UIColor colorWithRed:94.0f/255.0f green:23.0f/255.0f blue:135.0f/255.0f alpha:0.7]];
-
-
-
 
     
     // Configura acciones del campo de texto
@@ -223,14 +210,25 @@ NSUserDefaults* defaults;
     NSMutableArray* heroesGuardados = [[NSMutableArray alloc] initWithArray:[defaults objectForKey:@"heroesGuardados"]];
 
     for (int i = 0; i < [heroesGuardados count]; i++) {
+        // obtiene label e imageView
         UILabel* lNombre = (UILabel *)[self.view viewWithTag:(i+1)*100];
         UIImageView* iImagen = (UIImageView*)[self.view viewWithTag:(i+1)*10];
         
-        [lNombre setText:[NSString stringWithFormat:@" %@ ", [[heroesGuardados objectAtIndex:i] objectForKey:@"nombre"]]];
+        // Configura estilo del label
+        NSMutableParagraphStyle *estilo =  [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
+        estilo.alignment = NSTextAlignmentJustified;
+        estilo.firstLineHeadIndent = 5.0f;
+        estilo.lineSpacing = 3.0f;
+        estilo.tailIndent = 15.0f;
+        NSAttributedString *attrText = [[NSAttributedString alloc] initWithString:[[heroesGuardados objectAtIndex:i] objectForKey:@"nombre"] attributes:@{ NSParagraphStyleAttributeName : estilo}];
+
+        // asigna valores
+        lNombre.attributedText = attrText;
         [iImagen sd_setImageWithURL:[[heroesGuardados objectAtIndex:i] objectForKey:@"imagen"]];
         [iImagen setContentMode:UIViewContentModeScaleAspectFill];
         [iImagen setUserInteractionEnabled:YES];
         
+        // da posibilidad de tap a la imagen para mostrar el perfil del heroe
         HeroeTapGestureRecognizer *tapHeroe = [[HeroeTapGestureRecognizer alloc] initWithTarget:self  action:@selector(tapSobreHeroe:)];
         tapHeroe.numberOfTapsRequired = 1;
         tapHeroe.idHeroe = [[heroesGuardados objectAtIndex:i] objectForKey:@"id"];
@@ -248,6 +246,7 @@ NSUserDefaults* defaults;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     DamianWayne *vc = [storyboard instantiateViewControllerWithIdentifier:@"DamianWayne"];
     vc.idCaracter = tap.idHeroe;
+    vc.origen = ORIGEN_HOME;
     [vc setModalPresentationStyle:UIModalPresentationFullScreen];
     [self presentViewController:vc animated:NO completion:nil];
     
@@ -284,6 +283,7 @@ NSUserDefaults* defaults;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     DamianWayne *vc = [storyboard instantiateViewControllerWithIdentifier:@"DamianWayne"];
     vc.idCaracter = (NSNumber*)[[defaults objectForKey:@"HeroeDelDia"] valueForKey:@"id"];
+    vc.origen = ORIGEN_HOME;
     [vc setModalPresentationStyle:UIModalPresentationFullScreen];
     [self presentViewController:vc animated:NO completion:nil];
     

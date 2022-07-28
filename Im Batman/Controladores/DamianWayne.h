@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DamianWayne : UIViewController
+@interface DamianWayne : UIViewController <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *fondo;
 @property (weak, nonatomic) IBOutlet UIImageView *nubeSuperior;
@@ -46,6 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // Propiedades personzalizadas
 @property (strong, nonatomic) NSNumber* idCaracter;
+@property (strong, nonatomic) NSString* origen;
 
 @end
 

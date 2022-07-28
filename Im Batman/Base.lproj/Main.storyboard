@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ2-Aa-6DU">
-                                <rect key="frame" x="214" y="302" width="114" height="27"/>
+                                <rect key="frame" x="213" y="301" width="114" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondoInicio" translatesAutoresizingMaskIntoConstraints="NO" id="UY7-Me-ru0">
-                                <rect key="frame" x="-1" y="0.0" width="375" height="700"/>
+                                <rect key="frame" x="-1" y="-1" width="374" height="701"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cargandoNube" translatesAutoresizingMaskIntoConstraints="NO" id="u7X-DT-vwq">
@@ -38,11 +38,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cargandoBase" translatesAutoresizingMaskIntoConstraints="NO" id="Spt-7b-1qS">
-                                <rect key="frame" x="-1" y="339" width="373" height="309"/>
+                                <rect key="frame" x="-1" y="339" width="372" height="309"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cargandoBang" translatesAutoresizingMaskIntoConstraints="NO" id="Mm6-0l-9g4">
-                                <rect key="frame" x="-1" y="172" width="373" height="275"/>
+                                <rect key="frame" x="-1" y="172" width="372" height="274"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -63,7 +63,7 @@
         <!--Jason Todd-->
         <scene sceneID="zbW-iy-5pc">
             <objects>
-                <viewController storyboardIdentifier="JasonToddVista" id="WPj-Wn-nhM" customClass="JasonTodd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JasonTodd" id="WPj-Wn-nhM" customClass="JasonTodd" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zcs-Re-jMU"/>
                         <viewControllerLayoutGuide type="bottom" id="ULZ-2t-g9N"/>
