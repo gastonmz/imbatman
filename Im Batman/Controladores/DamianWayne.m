@@ -55,11 +55,17 @@ NSUserDefaults* defaultsDW;
     [_labelCarreraEventos setText:@"EVENTOS"];
     [_labelCarrerasComics setText:@"COMICS"];
     [_labelCarreraHistorias setText:@"HISTORIAS"];
+
+    [_labelCarreraSeries setBackgroundColor:[UIColor whiteColor]];
+    [_labelCarreraEventos setBackgroundColor:[UIColor whiteColor]];
+    [_labelCarrerasComics setBackgroundColor:[UIColor whiteColor]];
+    [_labelCarreraHistorias setBackgroundColor:[UIColor whiteColor]];
+
     [_textoCarrera setText:@"SU CARRERA HEROICA COMO TAL..."];
 
     
     // Configura Nombre de Heroe
-    [_labelNombre setText:@"s"];
+    [_labelNombre setText:@""];
     [_labelNombre setFont:[UIFont fontWithName:@"CCBiffBamBoom" size:30]];
     _labelNombre.numberOfLines = 1;
     _labelNombre.adjustsFontSizeToFitWidth = YES;
@@ -122,6 +128,7 @@ NSUserDefaults* defaultsDW;
         }
         if (exito) {
             
+            // Muestra info del hereo
             NSString* imagen = [NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension];
             
             [self->_labelNombre setText:resultados.data.results[0].name];
@@ -130,6 +137,37 @@ NSUserDefaults* defaultsDW;
                                   placeholderImage:[UIImage imageNamed:@"sinFoto"]];
 
             [self guardarHeroe:[resultados.data.results[0].id intValue] nombre:resultados.data.results[0].name imagen:imagen];
+            
+//[self obtieneCaraturlas:resultados.data.results[0].comics[0].items[0].resourceURI];
+            
+            // Procesa caratulas de su carrera Heroica
+            
+            // Comics
+            self->_labelCarreraTotalComics.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].comics[0].available];
+            if ([resultados.data.results[0].comics[0].available intValue] > 0) {
+                [self muestraCaratula:resultados.data.results[0].comics[0].items[0].resourceURI imageView:self->_fondoCarreraComics];
+            }
+            
+            // Series
+            self->_labelCarreraTotalSeries.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].series[0].available];
+            if ([resultados.data.results[0].series[0].available intValue] > 0) {
+                [self muestraCaratula:resultados.data.results[0].series[0].items[0].resourceURI imageView:self->_fondoCarreraSeries];
+            }
+
+            // Historias
+            self->_labelCarreraTotalHistorias.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].stories[0].available];
+            if ([resultados.data.results[0].stories[0].available intValue] > 0) {
+                [self muestraCaratula:resultados.data.results[0].stories[0].items[0].resourceURI imageView:self->_fondoCarreraHistorias];
+            }
+
+            // Eventos
+            self->_labelCarreraTotalEventos.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].events[0].available];
+            if ([resultados.data.results[0].events[0].available intValue] > 0) {
+                [self muestraCaratula:resultados.data.results[0].events[0].items[0].resourceURI imageView:self->_fondoCarreraEventos];
+            }
+
+            // resultados.data.results[0].comics[0].available
+            // resultados.data.results[0].comics[0].items[0].resourceURI
        }
 
         [ahiVamos desAnimame];
@@ -172,6 +210,40 @@ NSUserDefaults* defaultsDW;
     } else {
         return NO;
     }
+
+}
+
+- (void) muestraCaratula:(NSString *)url imageView:(UIImageView*)imageView{
+    
+    NSString* ts = TIME_STAMP;
+    NSString* urlCompleta = [NSString stringWithFormat:@"%@?apikey=%@&hash=%@&ts=%@",url,MARVEL_PUBLIC_KEY,[common createMarvelHash:ts],ts];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    [[session dataTaskWithURL:[NSURL URLWithString:urlCompleta]
+              completionHandler:^(NSData *data,
+                                  NSURLResponse *response,
+                                  NSError *error) {
+                // handle response
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+        NSLog(@"response status code: %ld", (long)[httpResponse statusCode]);
+
+        NSError * jsonError = nil;
+         NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
+         if (jsonError) {
+            NSLog(@"%@", jsonError);
+         } else {
+
+             NSString* p = [[[[[dictionary objectForKey:@"data"] objectForKey:@"results"] objectAtIndex:0] objectForKey:@"thumbnail"] valueForKey:@"path"];
+             NSString* e = [[[[[dictionary objectForKey:@"data"] objectForKey:@"results"] objectAtIndex:0] objectForKey:@"thumbnail"] valueForKey:@"extension"];
+             NSString* laCaratula = [NSString stringWithFormat:@"%@.%@",p,e];
+             
+             [imageView sd_setImageWithURL:[NSURL URLWithString:laCaratula]
+                          placeholderImage:[UIImage imageNamed:@"sinFoto"]];
+             
+
+         }
+        
+      }] resume];
 
 }
 /*
