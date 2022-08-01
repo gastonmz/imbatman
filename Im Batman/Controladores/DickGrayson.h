@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface DickGrayson : UIViewController <UITableViewDelegate>
+@interface DickGrayson : UIViewController <UITableViewDelegate,UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *fondo;
 @property (weak, nonatomic) IBOutlet UIImageView *nubeInferior;
@@ -31,6 +31,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *prefsLabelMostrar;
 @property (weak, nonatomic) IBOutlet UILabel *prefsCantidad;
 
+// Propiedades personzalizadas
+@property (strong, nonatomic) NSString* cadena;
 
 @end
 

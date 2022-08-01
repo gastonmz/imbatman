@@ -12,6 +12,7 @@
 #import "../Characters/charactersConductor.h"
 #import "DamianWayne.h"
 #import "../Core/ahiVamos.h"
+#import "DickGrayson.h"
 
 @import SDWebImage;
 @import Lottie;
@@ -259,6 +260,7 @@ NSUserDefaults* defaults;
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
+    [self buscarHeroes:self];
     return YES;
 }
 
@@ -276,6 +278,14 @@ NSUserDefaults* defaults;
 
 - (IBAction)buscarHeroes:(id)sender {
     
+    // si no escribis, no jodas...
+    if ([_textoBH.text isEqualToString:@""]) return;
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    DickGrayson *vc = [storyboard instantiateViewControllerWithIdentifier:@"DickGrayson"];
+    vc.cadena = _textoBH.text;
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:vc animated:NO completion:nil];
 }
 
 - (IBAction)verHeroeDelDia:(id)sender {

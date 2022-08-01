@@ -32,7 +32,6 @@
 
     [self BoludeamosUnPocoConLaIntro];
     
-    
     SDAnimatedImageView *imageView = [SDAnimatedImageView new];
     SDAnimatedImage *animatedImage = [SDAnimatedImage imageNamed:@"image.gif"];
     imageView.image = animatedImage;
@@ -40,32 +39,7 @@
     UILabel* esperame = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 30)];
     [esperame setText:@""];
     [self.view addSubview:esperame];
-  
-    
-    UIButton* aa = [[UIButton alloc] initWithFrame:CGRectMake(10, 150, 200, 50)];
-    [aa setTitle:@"todos" forState:UIControlStateNormal];
-    [aa addTarget:self
-               action:@selector(chupete:)
-     forControlEvents:UIControlEventTouchUpInside];
-    [aa setBackgroundColor:[UIColor redColor]];
-    [aa setExclusiveTouch:YES];
-
-
-
-    UIButton* cc = [[UIButton alloc] initWithFrame:CGRectMake(10, 230, 200, 50)];
-    [cc setTitle:@"mas" forState:UIControlStateNormal];
-    [cc setBackgroundColor:[UIColor blueColor]];
-    [cc setExclusiveTouch:YES];
-
-    [cc addTarget:self
-               action:@selector(chupete:)
-     forControlEvents:UIControlEventTouchUpInside];
-
-    
-
-  //  [self.view addSubview:aa];
-//    [self.view addSubview:cc];
-
+   
     
 }
 
@@ -166,36 +140,6 @@
   LOTAnimationTransitionController *animationController = [[LOTAnimationTransitionController alloc] initWithAnimationNamed:@"Three" fromLayerNamed:@"" toLayerNamed:@"" applyAnimationTransform:NO];
   return animationController;
 }
-
-
--(void) chupete:(UIButton*)sender{
-    
-    [self _showTransitionA];
-    
-//    (void)[[charactersConductor alloc] init];
-//    [charactersConductor obtieneLista:10 paginas:1 empiezaCon:@"j" bloque:^(BOOL exito, characters* resultados, NSError* problemas) {
-//        // averga...
-//        for (int x = 0; x < resultados.data.results.count; x++) {
-//            NSLog(@"%i - %@",x, resultados.data.results[x].name);
-//        }
-//
-//    }];
-//
-//
-}
-
-- (void) chupala:(UIButton*)sender {
-    (void)[[charactersConductor alloc] init];
-    [charactersConductor obtieneCaracter:1009487  bloque:^(BOOL exito, characters* resultados, NSError* problemas) {
-        // averga...
-        for (int x = 0; x < resultados.data.results.count; x++) {
-            NSLog(@"%i - %@",x, resultados.data.results[x].name);
-        }
-        
-    }];
-
-}
-
 
 @end
 
