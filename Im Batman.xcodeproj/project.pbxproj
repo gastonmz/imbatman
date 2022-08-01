@@ -49,6 +49,7 @@
 		F69EEBA9285E5E00009A89C4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBA8285E5E00009A89C4 /* Security.framework */; };
 		F69EEBB3285E7F89009A89C4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */; };
 		F69EEBBE285EAAF5009A89C4 /* characters.m in Sources */ = {isa = PBXBuildFile; fileRef = F69EEBBD285EAAF5009A89C4 /* characters.m */; };
+		F6A855FD289756EF001B29D7 /* DickGrayson.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A855FC289756EF001B29D7 /* DickGrayson.m */; };
 		F6EE54382877BE150083CB91 /* DamianWayne.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE54372877BE150083CB91 /* DamianWayne.m */; };
 		F6F717182880F3C6009A6828 /* flash_load.json in Resources */ = {isa = PBXBuildFile; fileRef = F6F717172880F3C6009A6828 /* flash_load.json */; };
 		F6F7171B28810234009A6828 /* ahiVamos.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F7171A28810234009A6828 /* ahiVamos.m */; };
@@ -161,6 +162,8 @@
 		F69EEBB2285E7F88009A89C4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F69EEBBC285EAAF5009A89C4 /* characters.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = characters.h; sourceTree = "<group>"; };
 		F69EEBBD285EAAF5009A89C4 /* characters.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = characters.m; sourceTree = "<group>"; };
+		F6A855FB289756EF001B29D7 /* DickGrayson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DickGrayson.h; sourceTree = "<group>"; };
+		F6A855FC289756EF001B29D7 /* DickGrayson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DickGrayson.m; sourceTree = "<group>"; };
 		F6EE54362877BE150083CB91 /* DamianWayne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DamianWayne.h; sourceTree = "<group>"; };
 		F6EE54372877BE150083CB91 /* DamianWayne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DamianWayne.m; sourceTree = "<group>"; };
 		F6F717172880F3C6009A6828 /* flash_load.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flash_load.json; sourceTree = "<group>"; };
@@ -266,6 +269,8 @@
 				F64E4E1E2873D463007E4D72 /* JasonTodd.m */,
 				F6EE54362877BE150083CB91 /* DamianWayne.h */,
 				F6EE54372877BE150083CB91 /* DamianWayne.m */,
+				F6A855FB289756EF001B29D7 /* DickGrayson.h */,
+				F6A855FC289756EF001B29D7 /* DickGrayson.m */,
 			);
 			path = Controladores;
 			sourceTree = "<group>";
@@ -649,6 +654,7 @@
 				F6608980285EB9C70033EE2D /* charactersResultsUrls.m in Sources */,
 				F6608983285EBCBB0033EE2D /* charactersResultsProps.m in Sources */,
 				F6608973285EAF530033EE2D /* charactersData.m in Sources */,
+				F6A855FD289756EF001B29D7 /* DickGrayson.m in Sources */,
 				F6608979285EB87C0033EE2D /* charactersResultsThumbnail.m in Sources */,
 				F610FA7D2861376C00FCF8B6 /* charactersConductor.m in Sources */,
 				F660898A285EBE1E0033EE2D /* common.m in Sources */,
