@@ -13,6 +13,7 @@
 #import "../Core/ahiVamos.h"
 
 @import SDWebImage;
+@import PopupDialog;
 
 @interface DamianWayne ()
 
@@ -96,9 +97,8 @@ NSUserDefaults* defaultsDW;
     [_labelCarreraTotalComics setText:@""];
     [_labelCarreraTotalHistorias setText:@""];
     
-    [_imagenHeroe setContentMode:UIViewContentModeScaleAspectFit];
+    [_imagenHeroe setContentMode:UIViewContentModeTop];
     [_imagenHeroe setClipsToBounds:YES];
-    //[_imagenHeroe setFrame:CGRectMake(0,  _imagenFondoHeroe.frame.origin.y, _imagenHeroe.frame.size.width, _imagenHeroe.frame.size.height)];
 
     // Configura imagen volver con un tap
     UITapGestureRecognizer *tapVolver = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(volver:)];
@@ -106,6 +106,15 @@ NSUserDefaults* defaultsDW;
     [_labelVolver setUserInteractionEnabled:YES];
     [tapVolver setDelegate:self];
     [_labelVolver addGestureRecognizer:tapVolver];
+    
+    // Customiza el popup de zoom
+    PopupDialogDefaultView* pd = [PopupDialogDefaultView appearance];
+    [pd setMessageFont:[UIFont fontWithName:@"CrimeFighterBB" size:12]];
+    [pd setMessageColor:[UIColor whiteColor]];
+    
+    PopupDialogContainerView* pc = [PopupDialogContainerView appearance];
+    [pc setBackgroundColor:[UIColor colorWithRed:0.23f green:0.23f blue:0.27f alpha:1.0f]];
+
 
 }
 
@@ -128,7 +137,7 @@ NSUserDefaults* defaultsDW;
         }
         if (exito) {
             
-            // Muestra info del hereo
+            // Muestra info del heroe
             NSString* imagen = [NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension];
             
             [self->_labelNombre setText:resultados.data.results[0].name];
@@ -138,7 +147,13 @@ NSUserDefaults* defaultsDW;
 
             [self guardarHeroe:[resultados.data.results[0].id intValue] nombre:resultados.data.results[0].name imagen:imagen];
             
-//[self obtieneCaraturlas:resultados.data.results[0].comics[0].items[0].resourceURI];
+            // Activa gestos para ver ima gen
+            UITapGestureRecognizer *tapZoom = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(zoomSobreFoto:)];
+            [tapZoom setNumberOfTapsRequired:1];
+            [self->_imagenHeroe setUserInteractionEnabled:YES];
+            [tapZoom setDelegate:self];
+            [self->_imagenHeroe addGestureRecognizer:tapZoom];
+
             
             // Procesa caratulas de su carrera Heroica
             
@@ -166,8 +181,6 @@ NSUserDefaults* defaultsDW;
                 [self muestraCaratula:resultados.data.results[0].events[0].items[0].resourceURI imageView:self->_fondoCarreraEventos];
             }
 
-            // resultados.data.results[0].comics[0].available
-            // resultados.data.results[0].comics[0].items[0].resourceURI
        }
 
         [ahiVamos desAnimame];
@@ -240,11 +253,40 @@ NSUserDefaults* defaultsDW;
              [imageView sd_setImageWithURL:[NSURL URLWithString:laCaratula]
                           placeholderImage:[UIImage imageNamed:@"sinFoto"]];
              
+             // Ubica el reconocedor de gestos en la cola principal
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 // Activa gestos para ver imagen
+                 UITapGestureRecognizer *tapZoom = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(zoomSobreFoto:)];
+                 [tapZoom setNumberOfTapsRequired:1];
+                 [imageView setUserInteractionEnabled:YES];
+                 [tapZoom setDelegate:self];
+                 [imageView addGestureRecognizer:tapZoom];
+
+             });
+             
+
 
          }
         
       }] resume];
 
+}
+
+- (void)zoomSobreFoto: (UITapGestureRecognizer*)gesture  {
+    
+    // Genera el popup
+    PopupDialog *popup = [[PopupDialog alloc] initWithTitle: @""
+                                                    message: @"Deslice hacia abajo para cerrar"
+                                                      image: [(UIImageView*)gesture.view image]
+                                            buttonAlignment: UILayoutConstraintAxisVertical
+                                            transitionStyle: PopupDialogTransitionStyleBounceUp
+                                             preferredWidth: 380
+                                        tapGestureDismissal: YES
+                                        panGestureDismissal: YES
+                                              hideStatusBar: YES
+                                                 completion: nil];
+
+    [self presentViewController:popup animated:YES completion:nil];
 }
 /*
 #pragma mark - Navigation

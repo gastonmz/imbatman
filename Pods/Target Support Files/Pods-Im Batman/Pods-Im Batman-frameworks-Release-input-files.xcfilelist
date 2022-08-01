@@ -1,6 +1,8 @@
 ${PODS_ROOT}/Target Support Files/Pods-Im Batman/Pods-Im Batman-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework
 ${BUILT_PRODUCTS_DIR}/ISO8601DateFormatterValueTransformer/ISO8601DateFormatterValueTransformer.framework
+${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework
 ${BUILT_PRODUCTS_DIR}/RKValueTransformers/RKValueTransformers.framework
 ${BUILT_PRODUCTS_DIR}/RestKit/RestKit.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework

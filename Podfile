@@ -12,6 +12,7 @@ target 'Im Batman' do
   pod 'SVGKit', :git => 'https://github.com/SVGKit/SVGKit.git', :branch => '3.x'
   pod 'RestKit'
   pod 'SDWebImage'
+  pod 'PopupDialog', '~> 1.0'
 
   target 'Im BatmanTests' do
     inherit! :search_paths
