@@ -11,6 +11,7 @@
 #import "../Objetos/characters.h"
 #import "../Characters/charactersConductor.h"
 #import "../Core/ahiVamos.h"
+#import "DamianWayne.h"
 
 #define ALTO_CELDA 80.0f
 #define ALTO_CELDA_DIVISION 9.0f
@@ -35,7 +36,9 @@ characters* resultadosDB;
 
     [self initConfig];
     _tablaResultados.delegate = self;
-  //  _tablaResultados.dataSource = self;
+//    _tablaResultados.delaysContentTouches = YES;
+//    _tablaResultados.canCancelContentTouches = YES;
+    _tablaResultados.allowsSelection = YES;
 
     if (![self.cadena isEqualToString:@""]) {
         [self buscarHeroes];
@@ -77,6 +80,7 @@ characters* resultadosDB;
     [_labelVolver setUserInteractionEnabled:YES];
     [tapVolver setDelegate:self];
     [_labelVolver addGestureRecognizer:tapVolver];
+
    
 }
 
@@ -89,6 +93,17 @@ characters* resultadosDB;
     
  }
 
+- (void) verHeroe: (long)heroeId {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    DamianWayne *vc = [storyboard instantiateViewControllerWithIdentifier:@"DamianWayne"];
+    vc.idCaracter = [NSNumber numberWithLong:heroeId];
+    vc.origen = ORIGEN_LISTADO;
+    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+    [self presentViewController:vc animated:NO completion:nil];
+    
+}
+
 - (void) buscarHeroes {
     
     
@@ -100,60 +115,17 @@ characters* resultadosDB;
         }
         if (exito) {
             
-                    for (int x = 0; x < resultados.data.results.count; x++) {
-                        NSLog(@"%i - %@",x, resultados.data.results[x].name);
-                    }
-            
+            [defaultsDG setObject:self->_cadena forKey:@"ultimaBusqueda"];
             resultadosDB = resultados;
             [self->_tablaResultados setDataSource:self];
             [self->_tablaResultados reloadData];
-            
-//            // Muestra info del heroe
-//            NSString* imagen = [NSString stringWithFormat:@"%@.%@", resultados.data.results[0].thumbnail.path,  resultados.data.results[0].thumbnail.extension];
-//
-//            [self->_labelNombre setText:resultados.data.results[0].name];
-//            [self->_labelDetalle setText:[resultados.data.results[0].description isEqualToString:@""]  ? NO_HAY_DETALLE : resultados.data.results[0].description];
-//            [self->_imagenHeroe sd_setImageWithURL:[NSURL URLWithString:imagen]
-//                                  placeholderImage:[UIImage imageNamed:@"sinFoto"]];
-//
-//            [self guardarHeroe:[resultados.data.results[0].id intValue] nombre:resultados.data.results[0].name imagen:imagen];
-//
-//            // Activa gestos para ver ima gen
-//            UITapGestureRecognizer *tapZoom = [[UITapGestureRecognizer alloc] initWithTarget:self  action:@selector(zoomSobreFoto:)];
-//            [tapZoom setNumberOfTapsRequired:1];
-//            [self->_imagenHeroe setUserInteractionEnabled:YES];
-//            [tapZoom setDelegate:self];
-//            [self->_imagenHeroe addGestureRecognizer:tapZoom];
-//
-//
-//            // Procesa caratulas de su carrera Heroica
-//
-//            // Comics
-//            self->_labelCarreraTotalComics.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].comics[0].available];
-//            if ([resultados.data.results[0].comics[0].available intValue] > 0) {
-//                [self muestraCaratula:resultados.data.results[0].comics[0].items[0].resourceURI imageView:self->_fondoCarreraComics];
-//            }
-//
-//            // Series
-//            self->_labelCarreraTotalSeries.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].series[0].available];
-//            if ([resultados.data.results[0].series[0].available intValue] > 0) {
-//                [self muestraCaratula:resultados.data.results[0].series[0].items[0].resourceURI imageView:self->_fondoCarreraSeries];
-//            }
-//
-//            // Historias
-//            self->_labelCarreraTotalHistorias.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].stories[0].available];
-//            if ([resultados.data.results[0].stories[0].available intValue] > 0) {
-//                [self muestraCaratula:resultados.data.results[0].stories[0].items[0].resourceURI imageView:self->_fondoCarreraHistorias];
-//            }
-//
-//            // Eventos
-//            self->_labelCarreraTotalEventos.text = [NSString stringWithFormat:@"%@", resultados.data.results[0].events[0].available];
-//            if ([resultados.data.results[0].events[0].available intValue] > 0) {
-//                [self muestraCaratula:resultados.data.results[0].events[0].items[0].resourceURI imageView:self->_fondoCarreraEventos];
-//            }
 
        }
-        [self->_labelResultados setText:[NSString stringWithFormat:@"ESTAS VIENDO %i HEROES DE %i QUE BUSCASTE COMO \"%@\"",(int)resultados.data.results.count,[resultados.data.total intValue],self.cadena]];
+        if ((int)resultados.data.results.count > 0) {
+            [self->_labelResultados setText:[NSString stringWithFormat:@"ESTAS VIENDO %i HEROES DE %i QUE BUSCASTE COMO \"%@\"",(int)resultados.data.results.count,[resultados.data.total intValue],self.cadena]];
+        } else {
+            [self->_labelResultados setText:[NSString stringWithFormat:@"LO SENTIMOS, NO ENCOENTRAMOS RESULTADOS PARA \"%@\"",self.cadena]];
+        }
 
         [ahiVamos desAnimame];
 
@@ -184,26 +156,27 @@ characters* resultadosDB;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 
-    static NSString *CellIdentifier = @"Cell";
+    NSString *CellIdentifier = [NSString stringWithFormat:@"celda%i",(int)indexPath.row];
+    UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
 
-      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-      if (cell == nil) {
-          cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier] ;
-      }
-
-    //cell.textLabel.text =  resultadosDB.data.results[indexPath.row].name;
     NSString* imagen = [NSString stringWithFormat:@"%@.%@", resultadosDB.data.results[indexPath.row].thumbnail.path,  resultadosDB.data.results[indexPath.row].thumbnail.extension];
-    [cell addSubview:[self celdaDeResultado:resultadosDB.data.results[indexPath.row].name posicion:(int)indexPath.row fotoHeroe:imagen idHeore:[resultadosDB.data.results[indexPath.row].id intValue]]];
+    [cell addSubview:[self celdaDeResultado:resultadosDB.data.results[indexPath.row].name posicion:(int)indexPath.row + 1 fotoHeroe:imagen idHeore:[resultadosDB.data.results[indexPath.row].id intValue]]];
     [cell setBackgroundColor:[UIColor clearColor]];
-    
-    NSLog(@"Celda %@", resultadosDB.data.results[indexPath.row].name);
-    
+    [cell setUserInteractionEnabled:YES];
+    [cell setTag:[resultadosDB.data.results[indexPath.row].id longValue]];
+   
     return cell;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return ALTO_CELDA;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [self verHeroe:(long)cell.tag];
+    NSLog(@"You tapped cell number %ld.", (long)cell.tag);
 }
 
 - (UIView*) celdaDeResultado: (NSString*)heroeNombre posicion:(int)posicion fotoHeroe:(NSString*)fotoHeroe idHeore:(int)idHeroe{
@@ -229,6 +202,7 @@ characters* resultadosDB;
     [nombre setFont:[UIFont fontWithName:@"CrimeFighterBB" size:16]];
     [heroe.layer setBorderColor: [[UIColor blackColor] CGColor]];
     [heroe.layer setBorderWidth: 2.0];
+    [heroe setTag:999];
     
     [heroe sd_setImageWithURL:[NSURL URLWithString:fotoHeroe]
                           placeholderImage:[UIImage imageNamed:@"sinFoto"]];
@@ -236,12 +210,15 @@ characters* resultadosDB;
     [resultado setTextColor:[UIColor colorWithRed:254.0f/255.0f green:13.0f/255.0f blue:14.0f/255.0f alpha:1.0f]];
     [nombre setText:heroeNombre];
 
+    [celda setUserInteractionEnabled:YES];
+    
     [celda addSubview:fondo];
     [celda addSubview:separacion];
     [celda addSubview:nombre];
     [celda addSubview:resultado];
     [celda addSubview:heroe];
-    
+
     return  celda;
 }
+
 @end

@@ -11,6 +11,7 @@
 #import "../Objetos/characters.h"
 #import "../Characters/charactersConductor.h"
 #import "../Core/ahiVamos.h"
+#import "DickGrayson.h"
 
 @import SDWebImage;
 @import PopupDialog;
@@ -61,6 +62,10 @@ NSUserDefaults* defaultsDW;
     [_labelCarreraEventos setBackgroundColor:[UIColor whiteColor]];
     [_labelCarrerasComics setBackgroundColor:[UIColor whiteColor]];
     [_labelCarreraHistorias setBackgroundColor:[UIColor whiteColor]];
+    [_labelCarreraTotalComics setBackgroundColor:[UIColor colorWithRed:112.0f/255.0f green:214.0f/255.0f blue:0.0f/255.0f alpha:10.0f]];
+    [_labelCarreraTotalSeries setBackgroundColor:[UIColor colorWithRed:112.0f/255.0f green:214.0f/255.0f blue:0.0f/255.0f alpha:10.0f]];
+    [_labelCarreraTotalEventos setBackgroundColor:[UIColor colorWithRed:112.0f/255.0f green:214.0f/255.0f blue:0.0f/255.0f alpha:10.0f]];
+    [_labelCarreraTotalHistorias setBackgroundColor:[UIColor colorWithRed:112.0f/255.0f green:214.0f/255.0f blue:0.0f/255.0f alpha:10.0f]];
 
     [_textoCarrera setText:@"SU CARRERA HEROICA COMO TAL..."];
 
@@ -97,7 +102,7 @@ NSUserDefaults* defaultsDW;
     [_labelCarreraTotalComics setText:@""];
     [_labelCarreraTotalHistorias setText:@""];
     
-    [_imagenHeroe setContentMode:UIViewContentModeTop];
+    [_imagenHeroe setContentMode:UIViewContentModeScaleAspectFill];
     [_imagenHeroe setClipsToBounds:YES];
 
     // Configura imagen volver con un tap
@@ -121,9 +126,17 @@ NSUserDefaults* defaultsDW;
 - (void) volver: (UITapGestureRecognizer*)gesture {
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:self.origen];
-    [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-    [self presentViewController:vc animated:NO completion:nil];
+    
+    if ([self.origen isEqualToString:ORIGEN_LISTADO]) {
+        DickGrayson *vc = [storyboard instantiateViewControllerWithIdentifier:self.origen];
+        vc.cadena = [defaultsDW objectForKey:@"ultimaBusqueda"];
+        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+        [self presentViewController:vc animated:NO completion:nil];
+    } else {
+        UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:self.origen];
+        [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+        [self presentViewController:vc animated:NO completion:nil];
+    }
     
  }
 
