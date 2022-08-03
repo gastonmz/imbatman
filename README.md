@@ -8,7 +8,7 @@
 ![Lenguaje](https://img.shields.io/badge/Lenguaje-Objective--C-orange)
 ![Xcode](https://img.shields.io/badge/Xcode-13.1-blue)
 ![Plataforma](https://img.shields.io/badge/Plataforma-iOS-8E64B0)
-![Estado](https://img.shields.io/badge/Estado%20del%20desarrollo-60%-yellow)
+![Estado](https://img.shields.io/badge/Estado%20del%20desarrollo-60-yellow)
 ![GitHub last commit](https://img.shields.io/github/last-commit/gastonmz/imbatman?label=Ultima%20actualizacion)
 ![Licencia](https://img.shields.io/badge/Licencia-Libre-lightgray)
 
